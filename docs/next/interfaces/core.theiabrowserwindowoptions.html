@@ -95,6 +95,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="core.theiabrowserwindowoptions.html#isfullscreen" class="tsd-kind-icon">is<wbr>Full<wbr>Screen</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="core.theiabrowserwindowoptions.html#ismaximized" class="tsd-kind-icon">is<wbr>Maximized</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="core.theiabrowserwindowoptions.html#screenlayout" class="tsd-kind-icon">screen<wbr>Layout</a></li>
 							</ul>
 						</section>
 					</div>
@@ -108,7 +109,7 @@
 					<div class="tsd-signature tsd-kind-icon">is<wbr>Full<wbr>Screen<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/17cadbd8034/packages/core/src/electron-main/electron-main-application.ts#L44">packages/core/src/electron-main/electron-main-application.ts:44</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/a3c2e91fa9a/packages/core/src/electron-main/electron-main-application.ts#L44">packages/core/src/electron-main/electron-main-application.ts:44</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -118,9 +119,26 @@
 					<div class="tsd-signature tsd-kind-icon">is<wbr>Maximized<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/17cadbd8034/packages/core/src/electron-main/electron-main-application.ts#L43">packages/core/src/electron-main/electron-main-application.ts:43</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/a3c2e91fa9a/packages/core/src/electron-main/electron-main-application.ts#L43">packages/core/src/electron-main/electron-main-application.ts:43</a></li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="screenlayout" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> screen<wbr>Layout</h3>
+					<div class="tsd-signature tsd-kind-icon">screen<wbr>Layout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/a3c2e91fa9a/packages/core/src/electron-main/electron-main-application.ts#L50">packages/core/src/electron-main/electron-main-application.ts:50</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Represents the complete screen layout for all available displays.
+								This field is used to determine if the layout was updated since the electron window was last opened,
+							in which case we want to invalidate the stored options and use the default options instead.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -524,6 +542,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="core.theiabrowserwindowoptions.html#ismaximized" class="tsd-kind-icon">is<wbr>Maximized</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="core.theiabrowserwindowoptions.html#screenlayout" class="tsd-kind-icon">screen<wbr>Layout</a>
 							</li>
 						</ul>
 					</li>
