@@ -99,6 +99,7 @@
 						<section class="tsd-index-section tsd-is-private-protected">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="core.defaultwindowservice.html#allowvetoes" class="tsd-kind-icon">allow<wbr>Vetoes</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="core.defaultwindowservice.html#contributions" class="tsd-kind-icon">contributions</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="core.defaultwindowservice.html#corepreferences" class="tsd-kind-icon">core<wbr>Preferences</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="core.defaultwindowservice.html#frontendapplication" class="tsd-kind-icon">frontend<wbr>Application</a></li>
@@ -114,12 +115,16 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="core.defaultwindowservice.html#canunload" class="tsd-kind-icon">can<wbr>Unload</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="core.defaultwindowservice.html#collectcontributionunloadvetoes" class="tsd-kind-icon">collect<wbr>Contribution<wbr>Unload<wbr>Vetoes</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="core.defaultwindowservice.html#handlebeforeunloadevent" class="tsd-kind-icon">handle<wbr>Before<wbr>Unload<wbr>Event</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="core.defaultwindowservice.html#issafetoshutdown" class="tsd-kind-icon">is<wbr>Safe<wbr>ToShut<wbr>Down</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="core.defaultwindowservice.html#onstart" class="tsd-kind-icon">on<wbr>Start</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="core.defaultwindowservice.html#opennewdefaultwindow" class="tsd-kind-icon">open<wbr>New<wbr>Default<wbr>Window</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="core.defaultwindowservice.html#opennewwindow" class="tsd-kind-icon">open<wbr>New<wbr>Window</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="core.defaultwindowservice.html#preventunload" class="tsd-kind-icon">prevent<wbr>Unload</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="core.defaultwindowservice.html#registerunloadlisteners" class="tsd-kind-icon">register<wbr>Unload<wbr>Listeners</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="core.defaultwindowservice.html#reload" class="tsd-kind-icon">reload</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="core.defaultwindowservice.html#setsafetoshutdown" class="tsd-kind-icon">set<wbr>Safe<wbr>ToShut<wbr>Down</a></li>
 							</ul>
 						</section>
 					</div>
@@ -145,12 +150,22 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-private-protected">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="allowvetoes" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> allow<wbr>Vetoes</h3>
+					<div class="tsd-signature tsd-kind-icon">allow<wbr>Vetoes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/aff706d0a32/packages/core/src/browser/window/default-window-service.ts#L30">packages/core/src/browser/window/default-window-service.ts:30</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 					<a name="contributions" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> contributions</h3>
 					<div class="tsd-signature tsd-kind-icon">contributions<span class="tsd-signature-symbol">:</span> <a href="../modules/core.html#contributionprovider-2" class="tsd-signature-type" data-tsd-kind="Variable">ContributionProvider</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/core.html#frontendapplicationcontribution-2" class="tsd-signature-type" data-tsd-kind="Variable">FrontendApplicationContribution</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/7f954ac2561/packages/core/src/browser/window/default-window-service.ts#L40">packages/core/src/browser/window/default-window-service.ts:40</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/aff706d0a32/packages/core/src/browser/window/default-window-service.ts#L42">packages/core/src/browser/window/default-window-service.ts:42</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -160,7 +175,7 @@
 					<div class="tsd-signature tsd-kind-icon">core<wbr>Preferences<span class="tsd-signature-symbol">:</span> <a href="../modules/core.html#preferenceproxy-2" class="tsd-signature-type" data-tsd-kind="Type alias">PreferenceProxy</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/core.coreconfiguration-1.html" class="tsd-signature-type" data-tsd-kind="Interface">CoreConfiguration</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/7f954ac2561/packages/core/src/browser/window/default-window-service.ts#L36">packages/core/src/browser/window/default-window-service.ts:36</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/aff706d0a32/packages/core/src/browser/window/default-window-service.ts#L38">packages/core/src/browser/window/default-window-service.ts:38</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -170,7 +185,7 @@
 					<div class="tsd-signature tsd-kind-icon">frontend<wbr>Application<span class="tsd-signature-symbol">:</span> <a href="core.frontendapplication-1.html" class="tsd-signature-type" data-tsd-kind="Class">FrontendApplication</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/7f954ac2561/packages/core/src/browser/window/default-window-service.ts#L28">packages/core/src/browser/window/default-window-service.ts:28</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/aff706d0a32/packages/core/src/browser/window/default-window-service.ts#L29">packages/core/src/browser/window/default-window-service.ts:29</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -180,7 +195,7 @@
 					<div class="tsd-signature tsd-kind-icon">on<wbr>Unload<wbr>Emitter<span class="tsd-signature-symbol">:</span> <a href="core.emitter-1.html" class="tsd-signature-type" data-tsd-kind="Class">Emitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = ...</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/7f954ac2561/packages/core/src/browser/window/default-window-service.ts#L30">packages/core/src/browser/window/default-window-service.ts:30</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/aff706d0a32/packages/core/src/browser/window/default-window-service.ts#L32">packages/core/src/browser/window/default-window-service.ts:32</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -197,7 +212,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/7f954ac2561/packages/core/src/browser/window/default-window-service.ts#L31">packages/core/src/browser/window/default-window-service.ts:31</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/aff706d0a32/packages/core/src/browser/window/default-window-service.ts#L33">packages/core/src/browser/window/default-window-service.ts:33</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/core.event-2.html" class="tsd-signature-type" data-tsd-kind="Interface">Event</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -207,21 +222,76 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="canunload" class="tsd-anchor"></a>
-					<h3>can<wbr>Unload</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">can<wbr>Unload<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="collectcontributionunloadvetoes" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> collect<wbr>Contribution<wbr>Unload<wbr>Vetoes</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">collect<wbr>Contribution<wbr>Unload<wbr>Vetoes<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/core.onwillstopaction-2.html" class="tsd-signature-type" data-tsd-kind="Interface">OnWillStopAction</a><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of WindowService.canUnload</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/7f954ac2561/packages/core/src/browser/window/default-window-service.ts#L56">packages/core/src/browser/window/default-window-service.ts:56</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/aff706d0a32/packages/core/src/browser/window/default-window-service.ts#L63">packages/core/src/browser/window/default-window-service.ts:63</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a list of actions that <a href="../modules/core.html#frontendapplicationcontribution">FrontendApplicationContribution</a>s would like to take before shutdown
+										It is expected that this will succeed - i.e. return an empty array - at most once per session. If no vetoes are received
+									during any cycle, no further checks will be made. In that case, shutdown should proceed unconditionally.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/core.onwillstopaction-2.html" class="tsd-signature-type" data-tsd-kind="Interface">OnWillStopAction</a><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="handlebeforeunloadevent" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> handle<wbr>Before<wbr>Unload<wbr>Event</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">handle<wbr>Before<wbr>Unload<wbr>Event<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BeforeUnloadEvent</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/aff706d0a32/packages/core/src/browser/window/default-window-service.ts#L126">packages/core/src/browser/window/default-window-service.ts:126</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Called when the <code>window</code> is about to <code>unload</code> its resources.
+										At this point, the <code>document</code> is still visible and the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event"><code>BeforeUnloadEvent</code></a>
+									event will be canceled if the return value of this method is <code>false</code>.</p>
+								</div>
+								<p>In Electron, handleCloseRequestEvent is is run instead.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>event: <span class="tsd-signature-type">BeforeUnloadEvent</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="issafetoshutdown" class="tsd-anchor"></a>
+					<h3>is<wbr>Safe<wbr>ToShut<wbr>Down</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Safe<wbr>ToShut<wbr>Down<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of WindowService.isSafeToShutDown</p>
+								<ul>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/aff706d0a32/packages/core/src/browser/window/default-window-service.ts#L99">packages/core/src/browser/window/default-window-service.ts:99</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -236,7 +306,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of FrontendApplicationContribution.onStart</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/7f954ac2561/packages/core/src/browser/window/default-window-service.ts#L42">packages/core/src/browser/window/default-window-service.ts:42</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/aff706d0a32/packages/core/src/browser/window/default-window-service.ts#L44">packages/core/src/browser/window/default-window-service.ts:44</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -260,7 +330,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of WindowService.openNewDefaultWindow</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/7f954ac2561/packages/core/src/browser/window/default-window-service.ts#L52">packages/core/src/browser/window/default-window-service.ts:52</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/aff706d0a32/packages/core/src/browser/window/default-window-service.ts#L54">packages/core/src/browser/window/default-window-service.ts:54</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -278,7 +348,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of WindowService.openNewWindow</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/7f954ac2561/packages/core/src/browser/window/default-window-service.ts#L47">packages/core/src/browser/window/default-window-service.ts:47</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/aff706d0a32/packages/core/src/browser/window/default-window-service.ts#L49">packages/core/src/browser/window/default-window-service.ts:49</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -301,7 +371,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/7f954ac2561/packages/core/src/browser/window/default-window-service.ts#L92">packages/core/src/browser/window/default-window-service.ts:92</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/aff706d0a32/packages/core/src/browser/window/default-window-service.ts#L145">packages/core/src/browser/window/default-window-service.ts:145</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -337,7 +407,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/7f954ac2561/packages/core/src/browser/window/default-window-service.ts#L70">packages/core/src/browser/window/default-window-service.ts:70</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/aff706d0a32/packages/core/src/browser/window/default-window-service.ts#L90">packages/core/src/browser/window/default-window-service.ts:90</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -345,6 +415,42 @@
 									<p>Implement the mechanism to detect unloading of the page.</p>
 								</div>
 							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="reload" class="tsd-anchor"></a>
+					<h3>reload</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">reload<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of WindowService.reload</p>
+								<ul>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/aff706d0a32/packages/core/src/browser/window/default-window-service.ts#L151">packages/core/src/browser/window/default-window-service.ts:151</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setsafetoshutdown" class="tsd-anchor"></a>
+					<h3>set<wbr>Safe<wbr>ToShut<wbr>Down</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Safe<wbr>ToShut<wbr>Down<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of WindowService.setSafeToShutDown</p>
+								<ul>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/aff706d0a32/packages/core/src/browser/window/default-window-service.ts#L115">packages/core/src/browser/window/default-window-service.ts:115</a></li>
+								</ul>
+							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -565,6 +671,9 @@
 								<a href="../modules/core.os-1.html">OS</a>
 							</li>
 							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="../modules/core.onwillstopaction-1.html">On<wbr>Will<wbr>Stop<wbr>Action</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
 								<a href="../modules/core.overridepreferencename-2.html">Override<wbr>Preference<wbr>Name</a>
 							</li>
 							<li class=" tsd-kind-namespace tsd-parent-kind-module">
@@ -750,6 +859,9 @@
 								<a href="core.defaultwindowservice.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="core.defaultwindowservice.html#allowvetoes" class="tsd-kind-icon">allow<wbr>Vetoes</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 								<a href="core.defaultwindowservice.html#contributions" class="tsd-kind-icon">contributions</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
@@ -764,8 +876,14 @@
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
 								<a href="core.defaultwindowservice.html#onunload" class="tsd-kind-icon">on<wbr>Unload</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="core.defaultwindowservice.html#collectcontributionunloadvetoes" class="tsd-kind-icon">collect<wbr>Contribution<wbr>Unload<wbr>Vetoes</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="core.defaultwindowservice.html#handlebeforeunloadevent" class="tsd-kind-icon">handle<wbr>Before<wbr>Unload<wbr>Event</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="core.defaultwindowservice.html#canunload" class="tsd-kind-icon">can<wbr>Unload</a>
+								<a href="core.defaultwindowservice.html#issafetoshutdown" class="tsd-kind-icon">is<wbr>Safe<wbr>ToShut<wbr>Down</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="core.defaultwindowservice.html#onstart" class="tsd-kind-icon">on<wbr>Start</a>
@@ -781,6 +899,12 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
 								<a href="core.defaultwindowservice.html#registerunloadlisteners" class="tsd-kind-icon">register<wbr>Unload<wbr>Listeners</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="core.defaultwindowservice.html#reload" class="tsd-kind-icon">reload</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="core.defaultwindowservice.html#setsafetoshutdown" class="tsd-kind-icon">set<wbr>Safe<wbr>ToShut<wbr>Down</a>
 							</li>
 						</ul>
 					</li>
