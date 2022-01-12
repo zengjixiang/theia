@@ -87,6 +87,7 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="core.externaluriservice.html#getremotehost" class="tsd-kind-icon">get<wbr>Remote<wbr>Host</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="core.externaluriservice.html#parselocalhost" class="tsd-kind-icon">parse<wbr>Localhost</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="core.externaluriservice.html#resolve" class="tsd-kind-icon">resolve</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="core.externaluriservice.html#toremotehost" class="tsd-kind-icon">to<wbr>Remote<wbr>Host</a></li>
@@ -115,17 +116,35 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="parselocalhost" class="tsd-anchor"></a>
-					<h3>parse<wbr>Localhost</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">parse<wbr>Localhost<span class="tsd-signature-symbol">(</span>uri<span class="tsd-signature-symbol">: </span><a href="core.default-1.html" class="tsd-signature-type" data-tsd-kind="Class">default</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span>address<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>port<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="getremotehost" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> get<wbr>Remote<wbr>Host</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Remote<wbr>Host<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/a11c163ca61/packages/core/src/browser/external-uri-service.ts#L50">packages/core/src/browser/external-uri-service.ts:50</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/fb74ef0ed87/packages/core/src/browser/external-uri-service.ts#L76">packages/core/src/browser/external-uri-service.ts:76</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<p>The remote host (where the backend is running).</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="parselocalhost" class="tsd-anchor"></a>
+					<h3>parse<wbr>Localhost</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">parse<wbr>Localhost<span class="tsd-signature-symbol">(</span>uri<span class="tsd-signature-symbol">: </span><a href="core.default-1.html" class="tsd-signature-type" data-tsd-kind="Class">default</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/core.addressport.html" class="tsd-signature-type" data-tsd-kind="Interface">AddressPort</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/fb74ef0ed87/packages/core/src/browser/external-uri-service.ts#L47">packages/core/src/browser/external-uri-service.ts:47</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -134,7 +153,7 @@
 									<h5>uri: <a href="core.default-1.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span>address<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>port<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/core.addressport.html" class="tsd-signature-type" data-tsd-kind="Interface">AddressPort</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -148,7 +167,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/a11c163ca61/packages/core/src/browser/external-uri-service.ts#L33">packages/core/src/browser/external-uri-service.ts:33</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/fb74ef0ed87/packages/core/src/browser/external-uri-service.ts#L39">packages/core/src/browser/external-uri-service.ts:39</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -173,27 +192,19 @@
 					<a name="toremotehost" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> to<wbr>Remote<wbr>Host</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
-						<li class="tsd-signature tsd-kind-icon">to<wbr>Remote<wbr>Host<span class="tsd-signature-symbol">(</span>localhost<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>address<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>port<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">to<wbr>Remote<wbr>Host<span class="tsd-signature-symbol">(</span>address<span class="tsd-signature-symbol">: </span><a href="../interfaces/core.addressport.html" class="tsd-signature-type" data-tsd-kind="Interface">AddressPort</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/a11c163ca61/packages/core/src/browser/external-uri-service.ts#L46">packages/core/src/browser/external-uri-service.ts:46</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/fb74ef0ed87/packages/core/src/browser/external-uri-service.ts#L69">packages/core/src/browser/external-uri-service.ts:69</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>localhost: <span class="tsd-signature-symbol">{ </span>address<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>port<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter">
-											<h5>address<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-										</li>
-										<li class="tsd-parameter">
-											<h5>port<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
-										</li>
-									</ul>
+									<h5>address: <a href="../interfaces/core.addressport.html" class="tsd-signature-type" data-tsd-kind="Interface">AddressPort</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -204,13 +215,13 @@
 					<a name="toremoteurl" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> to<wbr>Remote<wbr>Url</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
-						<li class="tsd-signature tsd-kind-icon">to<wbr>Remote<wbr>Url<span class="tsd-signature-symbol">(</span>uri<span class="tsd-signature-symbol">: </span><a href="core.default-1.html" class="tsd-signature-type" data-tsd-kind="Class">default</a>, localhost<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>address<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>port<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="core.default-1.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></li>
+						<li class="tsd-signature tsd-kind-icon">to<wbr>Remote<wbr>Url<span class="tsd-signature-symbol">(</span>uri<span class="tsd-signature-symbol">: </span><a href="core.default-1.html" class="tsd-signature-type" data-tsd-kind="Class">default</a>, address<span class="tsd-signature-symbol">: </span><a href="../interfaces/core.addressport.html" class="tsd-signature-type" data-tsd-kind="Interface">AddressPort</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="core.default-1.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/a11c163ca61/packages/core/src/browser/external-uri-service.ts#L41">packages/core/src/browser/external-uri-service.ts:41</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/fb74ef0ed87/packages/core/src/browser/external-uri-service.ts#L61">packages/core/src/browser/external-uri-service.ts:61</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -219,15 +230,7 @@
 									<h5>uri: <a href="core.default-1.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></h5>
 								</li>
 								<li>
-									<h5>localhost: <span class="tsd-signature-symbol">{ </span>address<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>port<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter">
-											<h5>address<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-										</li>
-										<li class="tsd-parameter">
-											<h5>port<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
-										</li>
-									</ul>
+									<h5>address: <a href="../interfaces/core.addressport.html" class="tsd-signature-type" data-tsd-kind="Interface">AddressPort</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="core.default-1.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></h4>
@@ -639,6 +642,9 @@
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
 								<a href="core.externaluriservice.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="core.externaluriservice.html#getremotehost" class="tsd-kind-icon">get<wbr>Remote<wbr>Host</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="core.externaluriservice.html#parselocalhost" class="tsd-kind-icon">parse<wbr>Localhost</a>
