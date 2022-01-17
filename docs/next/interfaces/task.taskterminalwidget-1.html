@@ -98,6 +98,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-protected"><a href="task.taskterminalwidget-1.html#ondiddisposeemitter" class="tsd-kind-icon">on<wbr>Did<wbr>Dispose<wbr>Emitter</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="task.taskterminalwidget-1.html#ondidopen" class="tsd-kind-icon">on<wbr>Did<wbr>Open</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="task.taskterminalwidget-1.html#ondidopenfailure" class="tsd-kind-icon">on<wbr>Did<wbr>Open<wbr>Failure</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="task.taskterminalwidget-1.html#onkey" class="tsd-kind-icon">on<wbr>Key</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="task.taskterminalwidget-1.html#onscrollup" class="tsd-kind-icon">on<wbr>Scroll<wbr>Up</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited tsd-is-protected"><a href="task.taskterminalwidget-1.html#onscrollupemitter" class="tsd-kind-icon">on<wbr>Scroll<wbr>UpEmitter</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="task.taskterminalwidget-1.html#onscrollyreachend" class="tsd-kind-icon">on<wbr>ScrollYReach<wbr>End</a></li>
@@ -164,7 +165,7 @@
 					<div class="tsd-signature tsd-kind-icon">busy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/450d257d542/packages/task/src/browser/task-terminal-widget-manager.ts#L33">packages/task/src/browser/task-terminal-widget-manager.ts:33</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/bc21e49a6b8/packages/task/src/browser/task-terminal-widget-manager.ts#L33">packages/task/src/browser/task-terminal-widget-manager.ts:33</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -174,7 +175,7 @@
 					<div class="tsd-signature tsd-kind-icon">dedicated<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/450d257d542/packages/task/src/browser/task-terminal-widget-manager.ts#L30">packages/task/src/browser/task-terminal-widget-manager.ts:30</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/bc21e49a6b8/packages/task/src/browser/task-terminal-widget-manager.ts#L30">packages/task/src/browser/task-terminal-widget-manager.ts:30</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -196,7 +197,7 @@
 					<aside class="tsd-sources">
 						<p>Overrides TerminalWidget.kind</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/450d257d542/packages/task/src/browser/task-terminal-widget-manager.ts#L29">packages/task/src/browser/task-terminal-widget-manager.ts:29</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/bc21e49a6b8/packages/task/src/browser/task-terminal-widget-manager.ts#L29">packages/task/src/browser/task-terminal-widget-manager.ts:29</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -223,7 +224,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from TerminalWidget.onData</p>
 						<ul>
-							<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:71</li>
+							<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:76</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -309,6 +310,22 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="onkey" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> on<wbr>Key</h3>
+					<div class="tsd-signature tsd-kind-icon">on<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>domEvent<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">KeyboardEvent</span><span class="tsd-signature-symbol">; </span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from TerminalWidget.onKey</p>
+						<ul>
+							<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:71</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Event that fires when the terminal receives a key event.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a name="onscrollup" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> on<wbr>Scroll<wbr>Up</h3>
 					<div class="tsd-signature tsd-kind-icon">on<wbr>Scroll<wbr>Up<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
@@ -375,7 +392,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from TerminalWidget.onTerminalDidClose</p>
 						<ul>
-							<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:82</li>
+							<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:87</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -439,7 +456,7 @@
 					<div class="tsd-signature tsd-kind-icon">task<wbr>Config<span class="tsd-signature-symbol">:</span> <a href="task.taskconfiguration-1.html" class="tsd-signature-type" data-tsd-kind="Interface">TaskConfiguration</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/450d257d542/packages/task/src/browser/task-terminal-widget-manager.ts#L32">packages/task/src/browser/task-terminal-widget-manager.ts:32</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/bc21e49a6b8/packages/task/src/browser/task-terminal-widget-manager.ts#L32">packages/task/src/browser/task-terminal-widget-manager.ts:32</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -449,7 +466,7 @@
 					<div class="tsd-signature tsd-kind-icon">task<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/450d257d542/packages/task/src/browser/task-terminal-widget-manager.ts#L31">packages/task/src/browser/task-terminal-widget-manager.ts:31</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/bc21e49a6b8/packages/task/src/browser/task-terminal-widget-manager.ts#L31">packages/task/src/browser/task-terminal-widget-manager.ts:31</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -692,7 +709,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from TerminalWidget.clearOutput</p>
 								<ul>
-									<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:86</li>
+									<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:91</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -808,7 +825,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from TerminalWidget.getSearchBox</p>
 								<ul>
-									<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:93</li>
+									<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:98</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -831,7 +848,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from TerminalWidget.hasChildProcesses</p>
 								<ul>
-									<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:97</li>
+									<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:102</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -998,7 +1015,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from TerminalWidget.resetTerminal</p>
 								<ul>
-									<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:78</li>
+									<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:83</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1016,7 +1033,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from TerminalWidget.resize</p>
 								<ul>
-									<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:89</li>
+									<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:94</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1043,7 +1060,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from TerminalWidget.scrollLineDown</p>
 								<ul>
-									<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:73</li>
+									<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:78</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1061,7 +1078,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from TerminalWidget.scrollLineUp</p>
 								<ul>
-									<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:72</li>
+									<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:77</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1079,7 +1096,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from TerminalWidget.scrollPageDown</p>
 								<ul>
-									<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:77</li>
+									<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:82</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1097,7 +1114,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from TerminalWidget.scrollPageUp</p>
 								<ul>
-									<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:76</li>
+									<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:81</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1115,7 +1132,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from TerminalWidget.scrollToBottom</p>
 								<ul>
-									<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:75</li>
+									<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:80</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1133,7 +1150,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from TerminalWidget.scrollToTop</p>
 								<ul>
-									<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:74</li>
+									<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:79</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1207,7 +1224,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from TerminalWidget.setTitle</p>
 								<ul>
-									<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:98</li>
+									<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:103</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1263,7 +1280,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from TerminalWidget.waitOnExit</p>
 								<ul>
-									<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:99</li>
+									<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:104</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1287,7 +1304,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from TerminalWidget.write</p>
 								<ul>
-									<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:88</li>
+									<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:93</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1311,7 +1328,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from TerminalWidget.writeLine</p>
 								<ul>
-									<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:87</li>
+									<li>Defined in packages/terminal/lib/browser/base/terminal-widget.d.ts:92</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1432,6 +1449,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="task.taskterminalwidget-1.html#ondidopenfailure" class="tsd-kind-icon">on<wbr>Did<wbr>Open<wbr>Failure</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="task.taskterminalwidget-1.html#onkey" class="tsd-kind-icon">on<wbr>Key</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 								<a href="task.taskterminalwidget-1.html#onscrollup" class="tsd-kind-icon">on<wbr>Scroll<wbr>Up</a>
