@@ -131,6 +131,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="plugin_ext.modalnotification.html#accept" class="tsd-kind-icon">accept</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-protected"><a href="plugin_ext.modalnotification.html#addacceptaction" class="tsd-kind-icon">add<wbr>Accept<wbr>Action</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-protected"><a href="plugin_ext.modalnotification.html#addaction" class="tsd-kind-icon">add<wbr>Action</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-protected"><a href="plugin_ext.modalnotification.html#addclipboardlistener" class="tsd-kind-icon">add<wbr>Clipboard<wbr>Listener</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-protected"><a href="plugin_ext.modalnotification.html#addcloseaction" class="tsd-kind-icon">add<wbr>Close<wbr>Action</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-protected"><a href="plugin_ext.modalnotification.html#addeventlistener" class="tsd-kind-icon">add<wbr>Event<wbr>Listener</a></li>
@@ -179,7 +180,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides AbstractDialog&lt;string | undefined&gt;.constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/c56aa230fe5/packages/plugin-ext/src/main/browser/dialogs/modal-notification.ts#L39">packages/plugin-ext/src/main/browser/dialogs/modal-notification.ts:39</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/96ff4ee79db/packages/plugin-ext/src/main/browser/dialogs/modal-notification.ts#L39">packages/plugin-ext/src/main/browser/dialogs/modal-notification.ts:39</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="plugin_ext.modalnotification.html" class="tsd-signature-type" data-tsd-kind="Class">ModalNotification</a></h4>
@@ -217,7 +218,7 @@
 					<div class="tsd-signature tsd-kind-icon">action<wbr>Title<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/c56aa230fe5/packages/plugin-ext/src/main/browser/dialogs/modal-notification.ts#L39">packages/plugin-ext/src/main/browser/dialogs/modal-notification.ts:39</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/96ff4ee79db/packages/plugin-ext/src/main/browser/dialogs/modal-notification.ts#L39">packages/plugin-ext/src/main/browser/dialogs/modal-notification.ts:39</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -487,7 +488,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/c56aa230fe5/packages/plugin-ext/src/main/browser/dialogs/modal-notification.ts#L50">packages/plugin-ext/src/main/browser/dialogs/modal-notification.ts:50</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/96ff4ee79db/packages/plugin-ext/src/main/browser/dialogs/modal-notification.ts#L50">packages/plugin-ext/src/main/browser/dialogs/modal-notification.ts:50</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h4>
@@ -526,7 +527,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from AbstractDialog.addAcceptAction</p>
 								<ul>
-									<li>Defined in packages/core/lib/browser/dialogs.d.ts:96</li>
+									<li>Defined in packages/core/lib/browser/dialogs.d.ts:97</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -539,6 +540,54 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>element: <span class="tsd-signature-type">HTMLElement</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>additionalEventTypes: <span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-protected">
+					<a name="addaction" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> add<wbr>Action</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Action&lt;K&gt;<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLElement</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span>, <span class="tsd-signature-symbol">...</span>additionalEventTypes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from AbstractDialog.addAction</p>
+								<ul>
+									<li>Defined in packages/core/lib/browser/dialogs.d.ts:95</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>K<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;fullscreenchange&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;fullscreenerror&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;abort&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;animationcancel&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;animationend&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;animationiteration&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;animationstart&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;auxclick&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;blur&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;cancel&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;canplay&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;canplaythrough&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;change&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;click&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;close&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;contextmenu&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;cuechange&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;dblclick&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;drag&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;dragend&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;dragenter&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;dragexit&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;dragleave&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;dragover&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;dragstart&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;drop&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;durationchange&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;emptied&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;ended&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;error&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;focus&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;focusin&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;focusout&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;gotpointercapture&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;input&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;invalid&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;keydown&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;keypress&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;keyup&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;load&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;loadeddata&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;loadedmetadata&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;loadstart&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;lostpointercapture&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;mousedown&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;mouseenter&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;mouseleave&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;mousemove&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;mouseout&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;mouseover&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;mouseup&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;pause&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;play&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;playing&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;pointercancel&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;pointerdown&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;pointerenter&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;pointerleave&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;pointermove&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;pointerout&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;pointerover&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;pointerup&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;progress&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;ratechange&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;reset&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;resize&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;scroll&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;securitypolicyviolation&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;seeked&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;seeking&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;select&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;selectionchange&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;selectstart&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;stalled&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;submit&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;suspend&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;timeupdate&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;toggle&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;touchcancel&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;touchend&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;touchmove&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;touchstart&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;transitioncancel&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;transitionend&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;transitionrun&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;transitionstart&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;volumechange&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;waiting&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;wheel&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;copy&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;cut&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;paste&quot;</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>element: <span class="tsd-signature-type">HTMLElement</span></h5>
+								</li>
+								<li>
+									<h5>callback: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>additionalEventTypes: <span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">[]</span></h5>
@@ -595,7 +644,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from AbstractDialog.addCloseAction</p>
 								<ul>
-									<li>Defined in packages/core/lib/browser/dialogs.d.ts:95</li>
+									<li>Defined in packages/core/lib/browser/dialogs.d.ts:96</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -873,7 +922,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/c56aa230fe5/packages/plugin-ext/src/main/browser/dialogs/modal-notification.ts#L59">packages/plugin-ext/src/main/browser/dialogs/modal-notification.ts:59</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/96ff4ee79db/packages/plugin-ext/src/main/browser/dialogs/modal-notification.ts#L59">packages/plugin-ext/src/main/browser/dialogs/modal-notification.ts:59</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1166,7 +1215,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides AbstractDialog.onCloseRequest</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/c56aa230fe5/packages/plugin-ext/src/main/browser/dialogs/modal-notification.ts#L45">packages/plugin-ext/src/main/browser/dialogs/modal-notification.ts:45</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/96ff4ee79db/packages/plugin-ext/src/main/browser/dialogs/modal-notification.ts#L45">packages/plugin-ext/src/main/browser/dialogs/modal-notification.ts:45</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1279,7 +1328,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/c56aa230fe5/packages/plugin-ext/src/main/browser/dialogs/modal-notification.ts#L54">packages/plugin-ext/src/main/browser/dialogs/modal-notification.ts:54</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/96ff4ee79db/packages/plugin-ext/src/main/browser/dialogs/modal-notification.ts#L54">packages/plugin-ext/src/main/browser/dialogs/modal-notification.ts:54</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1311,7 +1360,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/c56aa230fe5/packages/plugin-ext/src/main/browser/dialogs/modal-notification.ts#L101">packages/plugin-ext/src/main/browser/dialogs/modal-notification.ts:101</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/96ff4ee79db/packages/plugin-ext/src/main/browser/dialogs/modal-notification.ts#L101">packages/plugin-ext/src/main/browser/dialogs/modal-notification.ts:101</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1579,6 +1628,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-protected">
 								<a href="plugin_ext.modalnotification.html#addacceptaction" class="tsd-kind-icon">add<wbr>Accept<wbr>Action</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-protected">
+								<a href="plugin_ext.modalnotification.html#addaction" class="tsd-kind-icon">add<wbr>Action</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited tsd-is-protected">
 								<a href="plugin_ext.modalnotification.html#addclipboardlistener" class="tsd-kind-icon">add<wbr>Clipboard<wbr>Listener</a>
