@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>FilePreferenceProviderLocks | Theia TypeDoc</title>
+	<title>PreferenceTransactionFactory | Theia TypeDoc</title>
 	<meta name="description" content="Documentation for Theia TypeDoc">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../modules/preferences.html">preferences</a>
 				</li>
 				<li>
-					<a href="preferences.filepreferenceproviderlocks-1.html">FilePreferenceProviderLocks</a>
+					<a href="preferences.preferencetransactionfactory.html">PreferenceTransactionFactory</a>
 				</li>
 			</ul>
-			<h1>Interface FilePreferenceProviderLocks</h1>
+			<h1>Interface PreferenceTransactionFactory</h1>
 		</div>
 	</div>
 </header>
@@ -70,58 +70,31 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">FilePreferenceProviderLocks</span>
+						<span class="target">PreferenceTransactionFactory</span>
 					</li>
 				</ul>
 			</section>
-			<section class="tsd-panel-group tsd-index-group">
-				<h2>Index</h2>
-				<section class="tsd-panel tsd-index-panel">
-					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
-							<h3>Properties</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="preferences.filepreferenceproviderlocks-1.html#releasechange" class="tsd-kind-icon">release<wbr>Change</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="preferences.filepreferenceproviderlocks-1.html#releasetransaction" class="tsd-kind-icon">release<wbr>Transaction</a></li>
+			<section class="tsd-panel">
+				<h3 class="tsd-before-signature">Callable</h3>
+				<ul class="tsd-signatures tsd-kind-interface tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">Preference<wbr>Transaction<wbr>Factory<span class="tsd-signature-symbol">(</span>context<span class="tsd-signature-symbol">: </span><a href="../modules/preferences.html#preferencecontext-1" class="tsd-signature-type" data-tsd-kind="Variable">PreferenceContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/preferences.preferencetransaction.html" class="tsd-signature-type" data-tsd-kind="Class">PreferenceTransaction</a></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/f81ef73a537/packages/preferences/src/browser/preference-transaction-manager.ts#L239">packages/preferences/src/browser/preference-transaction-manager.ts:239</a></li>
 							</ul>
-						</section>
-					</div>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="releasechange" class="tsd-anchor"></a>
-					<h3>release<wbr>Change</h3>
-					<div class="tsd-signature tsd-kind-icon">release<wbr>Change<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Releaser</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/d6e4971d258/packages/preferences/src/browser/abstract-resource-preference-provider.ts#L46">packages/preferences/src/browser/abstract-resource-preference-provider.ts:46</a></li>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>context: <a href="../modules/preferences.html#preferencecontext-1" class="tsd-signature-type" data-tsd-kind="Variable">PreferenceContext</a></h5>
+							</li>
 						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>A lock on the queue for single operations.</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="releasetransaction" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> release<wbr>Transaction</h3>
-					<div class="tsd-signature tsd-kind-icon">release<wbr>Transaction<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Releaser</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/d6e4971d258/packages/preferences/src/browser/abstract-resource-preference-provider.ts#L42">packages/preferences/src/browser/abstract-resource-preference-provider.ts:42</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Defined if the current operation is the first operation in a new transaction.
-								The first operation is responsible for checking whether the underlying editor is dirty
-							and for saving the file when the transaction is complete.</p>
-						</div>
-					</div>
-				</section>
+						<h4 class="tsd-returns-title">Returns <a href="../classes/preferences.preferencetransaction.html" class="tsd-signature-type" data-tsd-kind="Class">PreferenceTransaction</a></h4>
+					</li>
+				</ul>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -172,15 +145,7 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="preferences.filepreferenceproviderlocks-1.html" class="tsd-kind-icon">File<wbr>Preference<wbr>Provider<wbr>Locks</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="preferences.filepreferenceproviderlocks-1.html#releasechange" class="tsd-kind-icon">release<wbr>Change</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="preferences.filepreferenceproviderlocks-1.html#releasetransaction" class="tsd-kind-icon">release<wbr>Transaction</a>
-							</li>
-						</ul>
+						<a href="preferences.preferencetransactionfactory.html" class="tsd-kind-icon">Preference<wbr>Transaction<wbr>Factory</a>
 					</li>
 				</ul>
 				<ul class="after-current">
@@ -204,7 +169,6 @@
 			<ul class="tsd-legend">
 				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
 				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
