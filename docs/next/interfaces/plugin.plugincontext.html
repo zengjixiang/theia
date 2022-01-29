@@ -92,6 +92,7 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="plugin.plugincontext.html#environmentvariablecollection" class="tsd-kind-icon">environment<wbr>Variable<wbr>Collection</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="plugin.plugincontext.html#extension" class="tsd-kind-icon">extension</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="plugin.plugincontext.html#extensionmode" class="tsd-kind-icon">extension<wbr>Mode</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="plugin.plugincontext.html#extensionpath" class="tsd-kind-icon">extension<wbr>Path</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="plugin.plugincontext.html#extensionuri" class="tsd-kind-icon">extension<wbr>Uri</a></li>
@@ -99,6 +100,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="plugin.plugincontext.html#globalstoragepath" class="tsd-kind-icon">global<wbr>Storage<wbr>Path</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="plugin.plugincontext.html#globalstorageuri" class="tsd-kind-icon">global<wbr>Storage<wbr>Uri</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="plugin.plugincontext.html#logpath" class="tsd-kind-icon">log<wbr>Path</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="plugin.plugincontext.html#loguri" class="tsd-kind-icon">log<wbr>Uri</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="plugin.plugincontext.html#secrets" class="tsd-kind-icon">secrets</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="plugin.plugincontext.html#storagepath" class="tsd-kind-icon">storage<wbr>Path</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="plugin.plugincontext.html#storageuri" class="tsd-kind-icon">storage<wbr>Uri</a></li>
@@ -123,7 +125,7 @@
 					<div class="tsd-signature tsd-kind-icon">environment<wbr>Variable<wbr>Collection<span class="tsd-signature-symbol">:</span> <a href="plugin.environmentvariablecollection.html" class="tsd-signature-type" data-tsd-kind="Interface">EnvironmentVariableCollection</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/d38f1118555/packages/plugin/src/theia.d.ts#L3126">packages/plugin/src/theia.d.ts:3126</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/edeee9cfae1/packages/plugin/src/theia.d.ts#L3126">packages/plugin/src/theia.d.ts:3126</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -134,12 +136,27 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="extension" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> extension</h3>
+					<div class="tsd-signature tsd-kind-icon">extension<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="plugin.plugin-1.html" class="tsd-signature-type" data-tsd-kind="Interface">Plugin</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/edeee9cfae1/packages/plugin/src/theia.d.ts#L3202">packages/plugin/src/theia.d.ts:3202</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The current extension instance.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="extensionmode" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> extension<wbr>Mode</h3>
 					<div class="tsd-signature tsd-kind-icon">extension<wbr>Mode<span class="tsd-signature-symbol">:</span> <a href="../enums/plugin.extensionmode.html" class="tsd-signature-type" data-tsd-kind="Enumeration">ExtensionMode</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/d38f1118555/packages/plugin/src/theia.d.ts#L3197">packages/plugin/src/theia.d.ts:3197</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/edeee9cfae1/packages/plugin/src/theia.d.ts#L3197">packages/plugin/src/theia.d.ts:3197</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -156,7 +173,7 @@
 					<div class="tsd-signature tsd-kind-icon">extension<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/d38f1118555/packages/plugin/src/theia.d.ts#L3115">packages/plugin/src/theia.d.ts:3115</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/edeee9cfae1/packages/plugin/src/theia.d.ts#L3115">packages/plugin/src/theia.d.ts:3115</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -171,7 +188,7 @@
 					<div class="tsd-signature tsd-kind-icon">extension<wbr>Uri<span class="tsd-signature-symbol">:</span> <a href="../classes/plugin.uri.html" class="tsd-signature-type" data-tsd-kind="Class">Uri</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/d38f1118555/packages/plugin/src/theia.d.ts#L3120">packages/plugin/src/theia.d.ts:3120</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/edeee9cfae1/packages/plugin/src/theia.d.ts#L3120">packages/plugin/src/theia.d.ts:3120</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -186,7 +203,7 @@
 					<div class="tsd-signature tsd-kind-icon">global<wbr>State<span class="tsd-signature-symbol">:</span> <a href="plugin.memento.html" class="tsd-signature-type" data-tsd-kind="Interface">Memento</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>setKeysForSync<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/d38f1118555/packages/plugin/src/theia.d.ts#L3090">packages/plugin/src/theia.d.ts:3090</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/edeee9cfae1/packages/plugin/src/theia.d.ts#L3090">packages/plugin/src/theia.d.ts:3090</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -202,7 +219,7 @@
 					<div class="tsd-signature tsd-kind-icon">global<wbr>Storage<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/d38f1118555/packages/plugin/src/theia.d.ts#L3171">packages/plugin/src/theia.d.ts:3171</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/edeee9cfae1/packages/plugin/src/theia.d.ts#L3171">packages/plugin/src/theia.d.ts:3171</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -225,7 +242,7 @@
 					<div class="tsd-signature tsd-kind-icon">global<wbr>Storage<wbr>Uri<span class="tsd-signature-symbol">:</span> <a href="../classes/plugin.uri.html" class="tsd-signature-type" data-tsd-kind="Class">Uri</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/d38f1118555/packages/plugin/src/theia.d.ts#L3183">packages/plugin/src/theia.d.ts:3183</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/edeee9cfae1/packages/plugin/src/theia.d.ts#L3183">packages/plugin/src/theia.d.ts:3183</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -249,7 +266,7 @@
 					<div class="tsd-signature tsd-kind-icon">log<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/d38f1118555/packages/plugin/src/theia.d.ts#L3190">packages/plugin/src/theia.d.ts:3190</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/edeee9cfae1/packages/plugin/src/theia.d.ts#L3190">packages/plugin/src/theia.d.ts:3190</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -261,12 +278,30 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="loguri" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> log<wbr>Uri</h3>
+					<div class="tsd-signature tsd-kind-icon">log<wbr>Uri<span class="tsd-signature-symbol">:</span> <a href="../classes/plugin.uri.html" class="tsd-signature-type" data-tsd-kind="Class">Uri</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/edeee9cfae1/packages/plugin/src/theia.d.ts#L3210">packages/plugin/src/theia.d.ts:3210</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The uri of a directory in which the extension can create log files. The directory might
+								not exist on disk and creation is up to the extension. However, the parent directory is
+								guaranteed to be existent.
+							see - workspace.fs for how to read and write files and folders from an uri.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="secrets" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> secrets</h3>
 					<div class="tsd-signature tsd-kind-icon">secrets<span class="tsd-signature-symbol">:</span> <a href="plugin.secretstorage.html" class="tsd-signature-type" data-tsd-kind="Interface">SecretStorage</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/d38f1118555/packages/plugin/src/theia.d.ts#L3110">packages/plugin/src/theia.d.ts:3110</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/edeee9cfae1/packages/plugin/src/theia.d.ts#L3110">packages/plugin/src/theia.d.ts:3110</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -281,7 +316,7 @@
 					<div class="tsd-signature tsd-kind-icon">storage<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/d38f1118555/packages/plugin/src/theia.d.ts#L3146">packages/plugin/src/theia.d.ts:3146</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/edeee9cfae1/packages/plugin/src/theia.d.ts#L3146">packages/plugin/src/theia.d.ts:3146</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -305,7 +340,7 @@
 					<div class="tsd-signature tsd-kind-icon">storage<wbr>Uri<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../classes/plugin.uri.html" class="tsd-signature-type" data-tsd-kind="Class">Uri</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/d38f1118555/packages/plugin/src/theia.d.ts#L3160">packages/plugin/src/theia.d.ts:3160</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/edeee9cfae1/packages/plugin/src/theia.d.ts#L3160">packages/plugin/src/theia.d.ts:3160</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -331,7 +366,7 @@
 					<div class="tsd-signature tsd-kind-icon">subscriptions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>dispose<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/d38f1118555/packages/plugin/src/theia.d.ts#L3078">packages/plugin/src/theia.d.ts:3078</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/edeee9cfae1/packages/plugin/src/theia.d.ts#L3078">packages/plugin/src/theia.d.ts:3078</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -347,7 +382,7 @@
 					<div class="tsd-signature tsd-kind-icon">workspace<wbr>State<span class="tsd-signature-symbol">:</span> <a href="plugin.memento.html" class="tsd-signature-type" data-tsd-kind="Interface">Memento</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/d38f1118555/packages/plugin/src/theia.d.ts#L3084">packages/plugin/src/theia.d.ts:3084</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/edeee9cfae1/packages/plugin/src/theia.d.ts#L3084">packages/plugin/src/theia.d.ts:3084</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -370,7 +405,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/d38f1118555/packages/plugin/src/theia.d.ts#L3134">packages/plugin/src/theia.d.ts:3134</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/edeee9cfae1/packages/plugin/src/theia.d.ts#L3134">packages/plugin/src/theia.d.ts:3134</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -451,6 +486,9 @@
 								<a href="plugin.plugincontext.html#environmentvariablecollection" class="tsd-kind-icon">environment<wbr>Variable<wbr>Collection</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="plugin.plugincontext.html#extension" class="tsd-kind-icon">extension</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="plugin.plugincontext.html#extensionmode" class="tsd-kind-icon">extension<wbr>Mode</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -470,6 +508,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="plugin.plugincontext.html#logpath" class="tsd-kind-icon">log<wbr>Path</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="plugin.plugincontext.html#loguri" class="tsd-kind-icon">log<wbr>Uri</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="plugin.plugincontext.html#secrets" class="tsd-kind-icon">secrets</a>
