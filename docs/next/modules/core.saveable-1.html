@@ -80,6 +80,7 @@
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="core.saveable-1.html#apply" class="tsd-kind-icon">apply</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="core.saveable-1.html#confirmsavebeforeclose" class="tsd-kind-icon">confirm<wbr>Save<wbr>Before<wbr>Close</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="core.saveable-1.html#get" class="tsd-kind-icon">get</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="core.saveable-1.html#getdirty" class="tsd-kind-icon">get<wbr>Dirty</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="core.saveable-1.html#is" class="tsd-kind-icon">is</a></li>
@@ -98,13 +99,13 @@
 					<a name="apply" class="tsd-anchor"></a>
 					<h3>apply</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">apply<span class="tsd-signature-symbol">(</span>widget<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Widget</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/core.saveablewidget-2.html" class="tsd-signature-type" data-tsd-kind="Interface">SaveableWidget</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+						<li class="tsd-signature tsd-kind-icon">apply<span class="tsd-signature-symbol">(</span>widget<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Widget</span>, getOtherSaveables<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">Widget</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/core.saveablewidget-2.html" class="tsd-signature-type" data-tsd-kind="Interface">SaveableWidget</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/core.saveablewidget-2.html" class="tsd-signature-type" data-tsd-kind="Interface">SaveableWidget</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/be4eba9d5ae/packages/core/src/browser/saveable.ts#L96">packages/core/src/browser/saveable.ts:96</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/0ad6d10e354/packages/core/src/browser/saveable.ts#L166">packages/core/src/browser/saveable.ts:166</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -112,8 +113,49 @@
 								<li>
 									<h5>widget: <span class="tsd-signature-type">Widget</span></h5>
 								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> getOtherSaveables: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">Widget</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/core.saveablewidget-2.html" class="tsd-signature-type" data-tsd-kind="Interface">SaveableWidget</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">Widget</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/core.saveablewidget-2.html" class="tsd-signature-type" data-tsd-kind="Interface">SaveableWidget</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">Widget</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/core.saveablewidget-2.html" class="tsd-signature-type" data-tsd-kind="Interface">SaveableWidget</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/core.saveablewidget-2.html" class="tsd-signature-type" data-tsd-kind="Interface">SaveableWidget</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="confirmsavebeforeclose" class="tsd-anchor"></a>
+					<h3>confirm<wbr>Save<wbr>Before<wbr>Close</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">confirm<wbr>Save<wbr>Before<wbr>Close<span class="tsd-signature-symbol">(</span>toClose<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Iterable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Widget</span><span class="tsd-signature-symbol">&gt;</span>, others<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Widget</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/0ad6d10e354/packages/core/src/browser/saveable.ts#L136">packages/core/src/browser/saveable.ts:136</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>toClose: <span class="tsd-signature-type">Iterable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Widget</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>others: <span class="tsd-signature-type">Widget</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -127,7 +169,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/be4eba9d5ae/packages/core/src/browser/saveable.ts#L68">packages/core/src/browser/saveable.ts:68</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/0ad6d10e354/packages/core/src/browser/saveable.ts#L68">packages/core/src/browser/saveable.ts:68</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -150,7 +192,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/be4eba9d5ae/packages/core/src/browser/saveable.ts#L78">packages/core/src/browser/saveable.ts:78</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/0ad6d10e354/packages/core/src/browser/saveable.ts#L78">packages/core/src/browser/saveable.ts:78</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -173,7 +215,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/be4eba9d5ae/packages/core/src/browser/saveable.ts#L64">packages/core/src/browser/saveable.ts:64</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/0ad6d10e354/packages/core/src/browser/saveable.ts#L64">packages/core/src/browser/saveable.ts:64</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -196,7 +238,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/be4eba9d5ae/packages/core/src/browser/saveable.ts#L86">packages/core/src/browser/saveable.ts:86</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/0ad6d10e354/packages/core/src/browser/saveable.ts#L86">packages/core/src/browser/saveable.ts:86</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -219,7 +261,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/be4eba9d5ae/packages/core/src/browser/saveable.ts#L60">packages/core/src/browser/saveable.ts:60</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/0ad6d10e354/packages/core/src/browser/saveable.ts#L60">packages/core/src/browser/saveable.ts:60</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -242,7 +284,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/be4eba9d5ae/packages/core/src/browser/saveable.ts#L90">packages/core/src/browser/saveable.ts:90</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/0ad6d10e354/packages/core/src/browser/saveable.ts#L90">packages/core/src/browser/saveable.ts:90</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -268,7 +310,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/be4eba9d5ae/packages/core/src/browser/saveable.ts#L143">packages/core/src/browser/saveable.ts:143</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/0ad6d10e354/packages/core/src/browser/saveable.ts#L185">packages/core/src/browser/saveable.ts:185</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -321,6 +363,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace">
 						<a href="core.saveable-1.html#apply" class="tsd-kind-icon">apply</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="core.saveable-1.html#confirmsavebeforeclose" class="tsd-kind-icon">confirm<wbr>Save<wbr>Before<wbr>Close</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace">
 						<a href="core.saveable-1.html#get" class="tsd-kind-icon">get</a>
