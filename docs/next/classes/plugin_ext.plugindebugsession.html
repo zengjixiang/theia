@@ -159,6 +159,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="plugin_ext.plugindebugsession.html#doupdatethreads" class="tsd-kind-icon">do<wbr>Update<wbr>Threads</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="plugin_ext.plugindebugsession.html#evaluate" class="tsd-kind-icon">evaluate</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="plugin_ext.plugindebugsession.html#findbreakpoint" class="tsd-kind-icon">find<wbr>Breakpoint</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="plugin_ext.plugindebugsession.html#findconsoleparent" class="tsd-kind-icon">find<wbr>Console<wbr>Parent</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="plugin_ext.plugindebugsession.html#firedidchange" class="tsd-kind-icon">fire<wbr>Did<wbr>Change</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="plugin_ext.plugindebugsession.html#firedidchangebreakpoints" class="tsd-kind-icon">fire<wbr>Did<wbr>Change<wbr>Breakpoints</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="plugin_ext.plugindebugsession.html#getaffecteduris" class="tsd-kind-icon">get<wbr>Affected<wbr>Uris</a></li>
@@ -218,7 +219,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides DebugSession.constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/d5bb4e83123/packages/plugin-ext/src/main/browser/debug/plugin-debug-session-factory.ts#L35">packages/plugin-ext/src/main/browser/debug/plugin-debug-session-factory.ts:35</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/a3b025a206b/packages/plugin-ext/src/main/browser/debug/plugin-debug-session-factory.ts#L35">packages/plugin-ext/src/main/browser/debug/plugin-debug-session-factory.ts:35</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1066,7 +1067,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides DebugSession.doCreateTerminal</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/d5bb4e83123/packages/plugin-ext/src/main/browser/debug/plugin-debug-session-factory.ts#L52">packages/plugin-ext/src/main/browser/debug/plugin-debug-session-factory.ts:52</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/a3b025a206b/packages/plugin-ext/src/main/browser/debug/plugin-debug-session-factory.ts#L52">packages/plugin-ext/src/main/browser/debug/plugin-debug-session-factory.ts:52</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1172,6 +1173,30 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">DebugBreakpoint</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">BaseBreakpoint</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="findconsoleparent" class="tsd-anchor"></a>
+					<h3>find<wbr>Console<wbr>Parent</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">find<wbr>Console<wbr>Parent<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">DebugSession</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from DebugSession.findConsoleParent</p>
+								<ul>
+									<li>Defined in packages/debug/lib/browser/debug-session.d.ts:153</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the top-most parent session that is responsible for the console. If this session uses a <a href="../enums/plugin_ext.debugconsolemode.html#separate">separate console</a>
+									or does not have any parent session, undefined is returned.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">DebugSession</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -2514,6 +2539,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 								<a href="plugin_ext.plugindebugsession.html#findbreakpoint" class="tsd-kind-icon">find<wbr>Breakpoint</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="plugin_ext.plugindebugsession.html#findconsoleparent" class="tsd-kind-icon">find<wbr>Console<wbr>Parent</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 								<a href="plugin_ext.plugindebugsession.html#firedidchange" class="tsd-kind-icon">fire<wbr>Did<wbr>Change</a>
