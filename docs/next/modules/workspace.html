@@ -92,6 +92,7 @@
 								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="workspace.html#workspaceservice" class="tsd-kind-icon">Workspace<wbr>Service</a></li>
 								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="workspace.html#workspacestate" class="tsd-kind-icon">Workspace<wbr>State</a></li>
 								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="workspace.html#workspacestates" class="tsd-kind-icon">Workspace<wbr>States</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="workspace.html#workspacetrustservice" class="tsd-kind-icon">Workspace<wbr>Trust<wbr>Service</a></li>
 								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="workspace.html#bindworkspacepreferences" class="tsd-kind-icon">bind<wbr>Workspace<wbr>Preferences</a></li>
 								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="workspace.html#createworkspacepreferences" class="tsd-kind-icon">create<wbr>Workspace<wbr>Preferences</a></li>
 								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="workspace.html#gettemporaryworkspacefileuri" class="tsd-kind-icon">get<wbr>Temporary<wbr>Workspace<wbr>File<wbr>Uri</a></li>
@@ -114,6 +115,7 @@
 							<h3>Enumerations</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-enum tsd-parent-kind-module"><a href="../enums/workspace.workspacestates-1.html" class="tsd-kind-icon">Workspace<wbr>States</a></li>
+								<li class="tsd-kind-enum tsd-parent-kind-module"><a href="../enums/workspace.workspacetrustprompt.html" class="tsd-kind-icon">Workspace<wbr>Trust<wbr>Prompt</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -140,6 +142,7 @@
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/workspace.workspaceschemaupdater.html" class="tsd-kind-icon">Workspace<wbr>Schema<wbr>Updater</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/workspace.workspaceservice-1.html" class="tsd-kind-icon">Workspace<wbr>Service</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/workspace.workspacestorageservice.html" class="tsd-kind-icon">Workspace<wbr>Storage<wbr>Service</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/workspace.workspacetrustservice-1.html" class="tsd-kind-icon">Workspace<wbr>Trust<wbr>Service</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/workspace.workspaceurilabelprovidercontribution.html" class="tsd-kind-icon">Workspace<wbr>Uri<wbr>Label<wbr>Provider<wbr>Contribution</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/workspace.workspaceutils.html" class="tsd-kind-icon">Workspace<wbr>Utils</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/workspace.workspacevariablecontribution.html" class="tsd-kind-icon">Workspace<wbr>Variable<wbr>Contribution</a></li>
@@ -154,6 +157,7 @@
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/workspace.workspacedata-2.html" class="tsd-kind-icon">Workspace<wbr>Data</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/workspace.workspaceinput-1.html" class="tsd-kind-icon">Workspace<wbr>Input</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/workspace.workspaceserver-1.html" class="tsd-kind-icon">Workspace<wbr>Server</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/workspace.workspacetrustconfiguration.html" class="tsd-kind-icon">Workspace<wbr>Trust<wbr>Configuration</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -163,6 +167,7 @@
 								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="workspace.html#workspacepreferences-1" class="tsd-kind-icon">Workspace<wbr>Preferences</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="workspace.html#workspaceschema-1" class="tsd-kind-icon">Workspace<wbr>Schema</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="workspace.html#workspacestate-1" class="tsd-kind-icon">Workspace<wbr>State</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="workspace.html#workspacetrustpreferences" class="tsd-kind-icon">Workspace<wbr>Trust<wbr>Preferences</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -177,20 +182,28 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="workspace.html#theia_ext-1" class="tsd-kind-icon">THEIA_<wbr>EXT</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="workspace.html#vscode_ext-1" class="tsd-kind-icon">VSCODE_<wbr>EXT</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="workspace.html#workspace_trust_empty_window" class="tsd-kind-icon">WORKSPACE_<wbr>TRUST_<wbr>EMPTY_<wbr>WINDOW</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="workspace.html#workspace_trust_enabled" class="tsd-kind-icon">WORKSPACE_<wbr>TRUST_<wbr>ENABLED</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="workspace.html#workspace_trust_startup_prompt" class="tsd-kind-icon">WORKSPACE_<wbr>TRUST_<wbr>STARTUP_<wbr>PROMPT</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="workspace.html#workspacepreferencecontribution-1" class="tsd-kind-icon">Workspace<wbr>Preference<wbr>Contribution</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="workspace.html#workspacepreferences-2" class="tsd-kind-icon">Workspace<wbr>Preferences</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="workspace.html#workspaceserver-2" class="tsd-kind-icon">Workspace<wbr>Server</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="workspace.html#workspacetrustpreferencecontribution" class="tsd-kind-icon">Workspace<wbr>Trust<wbr>Preference<wbr>Contribution</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="workspace.html#workspacetrustpreferences-1" class="tsd-kind-icon">Workspace<wbr>Trust<wbr>Preferences</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="workspace.html#workspacepath-1" class="tsd-kind-icon">workspace<wbr>Path</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="workspace.html#workspacepreferenceschema-1" class="tsd-kind-icon">workspace<wbr>Preference<wbr>Schema</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="workspace.html#workspaceschema-2" class="tsd-kind-icon">workspace<wbr>Schema</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="workspace.html#workspaceschemaid" class="tsd-kind-icon">workspace<wbr>Schema<wbr>Id</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="workspace.html#workspacetrustpreferenceschema" class="tsd-kind-icon">workspace<wbr>Trust<wbr>Preference<wbr>Schema</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="workspace.html#bindworkspacepreferences-1" class="tsd-kind-icon">bind<wbr>Workspace<wbr>Preferences</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="workspace.html#bindworkspacetrustpreferences" class="tsd-kind-icon">bind<wbr>Workspace<wbr>Trust<wbr>Preferences</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="workspace.html#createworkspacepreferences-1" class="tsd-kind-icon">create<wbr>Workspace<wbr>Preferences</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="workspace.html#createworkspacetrustpreferences" class="tsd-kind-icon">create<wbr>Workspace<wbr>Trust<wbr>Preferences</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="workspace.html#gettemporaryworkspacefileuri-1" class="tsd-kind-icon">get<wbr>Temporary<wbr>Workspace<wbr>File<wbr>Uri</a></li>
 							</ul>
 						</section>
@@ -310,6 +323,11 @@
 					Re-exports <a href="../enums/workspace.workspacestates-1.html">WorkspaceStates</a>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="workspacetrustservice" class="tsd-anchor"></a>
+					<h3>Workspace<wbr>Trust<wbr>Service</h3>
+					Re-exports <a href="../classes/workspace.workspacetrustservice-1.html">WorkspaceTrustService</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
 					<a name="bindworkspacepreferences" class="tsd-anchor"></a>
 					<h3>bind<wbr>Workspace<wbr>Preferences</h3>
 					Re-exports <a href="workspace.html#bindworkspacepreferences-1">bindWorkspacePreferences</a>
@@ -343,7 +361,7 @@
 					<div class="tsd-signature tsd-kind-icon">Workbench<wbr>State<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../enums/workspace.workspacestates-1.html" class="tsd-signature-type" data-tsd-kind="Enumeration">WorkspaceStates</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/workspace/src/browser/workspace-frontend-contribution.ts#L57">packages/workspace/src/browser/workspace-frontend-contribution.ts:57</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/workspace/src/browser/workspace-frontend-contribution.ts#L57">packages/workspace/src/browser/workspace-frontend-contribution.ts:57</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -353,7 +371,7 @@
 					<div class="tsd-signature tsd-kind-icon">Workspace<wbr>Preferences<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">PreferenceProxy</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/workspace.workspaceconfiguration-1.html" class="tsd-signature-type" data-tsd-kind="Interface">WorkspaceConfiguration</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/workspace/src/browser/workspace-preferences.ts#L50">packages/workspace/src/browser/workspace-preferences.ts:50</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/workspace/src/browser/workspace-preferences.ts#L50">packages/workspace/src/browser/workspace-preferences.ts:50</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -363,7 +381,7 @@
 					<div class="tsd-signature tsd-kind-icon">Workspace<wbr>Schema<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Required</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">IJSONSchema</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;properties&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;required&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/workspace/src/browser/workspace-schema-updater.ts#L114">packages/workspace/src/browser/workspace-schema-updater.ts:114</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/workspace/src/browser/workspace-schema-updater.ts#L114">packages/workspace/src/browser/workspace-schema-updater.ts:114</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -373,7 +391,17 @@
 					<div class="tsd-signature tsd-kind-icon">Workspace<wbr>State<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../enums/workspace.workspacestates-1.html" class="tsd-signature-type" data-tsd-kind="Enumeration">WorkspaceStates</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/workspace/src/browser/workspace-frontend-contribution.ts#L56">packages/workspace/src/browser/workspace-frontend-contribution.ts:56</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/workspace/src/browser/workspace-frontend-contribution.ts#L56">packages/workspace/src/browser/workspace-frontend-contribution.ts:56</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="workspacetrustpreferences" class="tsd-anchor"></a>
+					<h3>Workspace<wbr>Trust<wbr>Preferences</h3>
+					<div class="tsd-signature tsd-kind-icon">Workspace<wbr>Trust<wbr>Preferences<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">PreferenceProxy</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/workspace.workspacetrustconfiguration.html" class="tsd-signature-type" data-tsd-kind="Interface">WorkspaceTrustConfiguration</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/workspace/src/browser/workspace-trust-preferences.ts#L62">packages/workspace/src/browser/workspace-trust-preferences.ts:62</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -403,7 +431,7 @@
 					<div class="tsd-signature tsd-kind-icon">THEIA_<wbr>EXT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;theia-workspace&quot;</span><span class="tsd-signature-symbol"> = &#x27;theia-workspace&#x27;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/workspace/src/common/utils.ts#L24">packages/workspace/src/common/utils.ts:24</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/workspace/src/common/utils.ts#L24">packages/workspace/src/common/utils.ts:24</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -413,7 +441,37 @@
 					<div class="tsd-signature tsd-kind-icon">VSCODE_<wbr>EXT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;code-workspace&quot;</span><span class="tsd-signature-symbol"> = &#x27;code-workspace&#x27;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/workspace/src/common/utils.ts#L25">packages/workspace/src/common/utils.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/workspace/src/common/utils.ts#L25">packages/workspace/src/common/utils.ts:25</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="workspace_trust_empty_window" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> WORKSPACE_<wbr>TRUST_<wbr>EMPTY_<wbr>WINDOW</h3>
+					<div class="tsd-signature tsd-kind-icon">WORKSPACE_<wbr>TRUST_<wbr>EMPTY_<wbr>WINDOW<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;security.workspace.trust.emptyWindow&quot;</span><span class="tsd-signature-symbol"> = &#x27;security.workspace.trust.emptyWindow&#x27;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/workspace/src/browser/workspace-trust-preferences.ts#L25">packages/workspace/src/browser/workspace-trust-preferences.ts:25</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="workspace_trust_enabled" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> WORKSPACE_<wbr>TRUST_<wbr>ENABLED</h3>
+					<div class="tsd-signature tsd-kind-icon">WORKSPACE_<wbr>TRUST_<wbr>ENABLED<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;security.workspace.trust.enabled&quot;</span><span class="tsd-signature-symbol"> = &#x27;security.workspace.trust.enabled&#x27;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/workspace/src/browser/workspace-trust-preferences.ts#L23">packages/workspace/src/browser/workspace-trust-preferences.ts:23</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="workspace_trust_startup_prompt" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> WORKSPACE_<wbr>TRUST_<wbr>STARTUP_<wbr>PROMPT</h3>
+					<div class="tsd-signature tsd-kind-icon">WORKSPACE_<wbr>TRUST_<wbr>STARTUP_<wbr>PROMPT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;security.workspace.trust.startupPrompt&quot;</span><span class="tsd-signature-symbol"> = &#x27;security.workspace.trust.startupPrompt&#x27;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/workspace/src/browser/workspace-trust-preferences.ts#L24">packages/workspace/src/browser/workspace-trust-preferences.ts:24</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -423,7 +481,7 @@
 					<div class="tsd-signature tsd-kind-icon">Workspace<wbr>Preference<wbr>Contribution<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">typeof </span><a href="workspace.html#workspacepreferencecontribution-1" class="tsd-signature-type" data-tsd-kind="Variable">WorkspacePreferenceContribution</a><span class="tsd-signature-symbol"> = ...</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/workspace/src/browser/workspace-preferences.ts#L48">packages/workspace/src/browser/workspace-preferences.ts:48</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/workspace/src/browser/workspace-preferences.ts#L48">packages/workspace/src/browser/workspace-preferences.ts:48</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -433,7 +491,7 @@
 					<div class="tsd-signature tsd-kind-icon">Workspace<wbr>Preferences<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">typeof </span><a href="workspace.html#workspacepreferences-2" class="tsd-signature-type" data-tsd-kind="Variable">WorkspacePreferences</a><span class="tsd-signature-symbol"> = ...</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/workspace/src/browser/workspace-preferences.ts#L49">packages/workspace/src/browser/workspace-preferences.ts:49</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/workspace/src/browser/workspace-preferences.ts#L49">packages/workspace/src/browser/workspace-preferences.ts:49</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -443,7 +501,7 @@
 					<div class="tsd-signature tsd-kind-icon">Workspace<wbr>Server<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">typeof </span><a href="workspace.html#workspaceserver-2" class="tsd-signature-type" data-tsd-kind="Variable">WorkspaceServer</a><span class="tsd-signature-symbol"> = ...</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/workspace/src/common/workspace-protocol.ts#L22">packages/workspace/src/common/workspace-protocol.ts:22</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/workspace/src/common/workspace-protocol.ts#L22">packages/workspace/src/common/workspace-protocol.ts:22</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -453,12 +511,32 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="workspacetrustpreferencecontribution" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Workspace<wbr>Trust<wbr>Preference<wbr>Contribution</h3>
+					<div class="tsd-signature tsd-kind-icon">Workspace<wbr>Trust<wbr>Preference<wbr>Contribution<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">typeof </span><a href="workspace.html#workspacetrustpreferencecontribution" class="tsd-signature-type" data-tsd-kind="Variable">WorkspaceTrustPreferenceContribution</a><span class="tsd-signature-symbol"> = ...</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/workspace/src/browser/workspace-trust-preferences.ts#L60">packages/workspace/src/browser/workspace-trust-preferences.ts:60</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="workspacetrustpreferences-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Workspace<wbr>Trust<wbr>Preferences</h3>
+					<div class="tsd-signature tsd-kind-icon">Workspace<wbr>Trust<wbr>Preferences<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">typeof </span><a href="workspace.html#workspacetrustpreferences-1" class="tsd-signature-type" data-tsd-kind="Variable">WorkspaceTrustPreferences</a><span class="tsd-signature-symbol"> = ...</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/workspace/src/browser/workspace-trust-preferences.ts#L61">packages/workspace/src/browser/workspace-trust-preferences.ts:61</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
 					<a name="workspacepath-1" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> workspace<wbr>Path</h3>
 					<div class="tsd-signature tsd-kind-icon">workspace<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;/services/workspace&quot;</span><span class="tsd-signature-symbol"> = &#x27;/services/workspace&#x27;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/workspace/src/common/workspace-protocol.ts#L17">packages/workspace/src/common/workspace-protocol.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/workspace/src/common/workspace-protocol.ts#L17">packages/workspace/src/common/workspace-protocol.ts:17</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -482,7 +560,7 @@
 					<div class="tsd-signature tsd-kind-icon">workspace<wbr>Preference<wbr>Schema<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">PreferenceSchema</span><span class="tsd-signature-symbol"> = ...</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/workspace/src/browser/workspace-preferences.ts#L27">packages/workspace/src/browser/workspace-preferences.ts:27</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/workspace/src/browser/workspace-preferences.ts#L27">packages/workspace/src/browser/workspace-preferences.ts:27</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -492,7 +570,7 @@
 					<div class="tsd-signature tsd-kind-icon">workspace<wbr>Schema<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IJSONSchema</span><span class="tsd-signature-symbol"> = ...</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/workspace/src/browser/workspace-schema-updater.ts#L127">packages/workspace/src/browser/workspace-schema-updater.ts:127</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/workspace/src/browser/workspace-schema-updater.ts#L127">packages/workspace/src/browser/workspace-schema-updater.ts:127</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -502,7 +580,17 @@
 					<div class="tsd-signature tsd-kind-icon">workspace<wbr>Schema<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;vscode://schemas/workspace&quot;</span><span class="tsd-signature-symbol"> = &#x27;vscode://schemas/workspace&#x27;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/workspace/src/browser/workspace-schema-updater.ts#L126">packages/workspace/src/browser/workspace-schema-updater.ts:126</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/workspace/src/browser/workspace-schema-updater.ts#L126">packages/workspace/src/browser/workspace-schema-updater.ts:126</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="workspacetrustpreferenceschema" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> workspace<wbr>Trust<wbr>Preference<wbr>Schema</h3>
+					<div class="tsd-signature tsd-kind-icon">workspace<wbr>Trust<wbr>Preference<wbr>Schema<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">PreferenceSchema</span><span class="tsd-signature-symbol"> = ...</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/workspace/src/browser/workspace-trust-preferences.ts#L33">packages/workspace/src/browser/workspace-trust-preferences.ts:33</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -519,7 +607,30 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/workspace/src/browser/workspace-preferences.ts#L56">packages/workspace/src/browser/workspace-preferences.ts:56</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/workspace/src/browser/workspace-preferences.ts#L56">packages/workspace/src/browser/workspace-preferences.ts:56</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>bind: <span class="tsd-signature-type">interfaces.Bind</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="bindworkspacetrustpreferences" class="tsd-anchor"></a>
+					<h3>bind<wbr>Workspace<wbr>Trust<wbr>Preferences</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">bind<wbr>Workspace<wbr>Trust<wbr>Preferences<span class="tsd-signature-symbol">(</span>bind<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">interfaces.Bind</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/workspace/src/browser/workspace-trust-preferences.ts#L68">packages/workspace/src/browser/workspace-trust-preferences.ts:68</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -542,7 +653,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/workspace/src/browser/workspace-preferences.ts#L52">packages/workspace/src/browser/workspace-preferences.ts:52</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/workspace/src/browser/workspace-preferences.ts#L52">packages/workspace/src/browser/workspace-preferences.ts:52</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -559,6 +670,32 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="createworkspacetrustpreferences" class="tsd-anchor"></a>
+					<h3>create<wbr>Workspace<wbr>Trust<wbr>Preferences</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Workspace<wbr>Trust<wbr>Preferences<span class="tsd-signature-symbol">(</span>preferences<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PreferenceService</span>, schema<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">PreferenceSchema</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="workspace.html#workspacetrustpreferences-1" class="tsd-signature-type" data-tsd-kind="Variable">WorkspaceTrustPreferences</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/workspace/src/browser/workspace-trust-preferences.ts#L64">packages/workspace/src/browser/workspace-trust-preferences.ts:64</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>preferences: <span class="tsd-signature-type">PreferenceService</span></h5>
+								</li>
+								<li>
+									<h5>schema: <span class="tsd-signature-type">PreferenceSchema</span><span class="tsd-signature-symbol"> = ...</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="workspace.html#workspacetrustpreferences-1" class="tsd-signature-type" data-tsd-kind="Variable">WorkspaceTrustPreferences</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
 					<a name="gettemporaryworkspacefileuri-1" class="tsd-anchor"></a>
 					<h3>get<wbr>Temporary<wbr>Workspace<wbr>File<wbr>Uri</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
@@ -568,7 +705,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/workspace/src/common/utils.ts#L30">packages/workspace/src/common/utils.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/workspace/src/common/utils.ts#L30">packages/workspace/src/common/utils.ts:30</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -690,6 +827,9 @@
 						<a href="workspace.html#workspacestates" class="tsd-kind-icon">Workspace<wbr>States</a>
 					</li>
 					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="workspace.html#workspacetrustservice" class="tsd-kind-icon">Workspace<wbr>Trust<wbr>Service</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
 						<a href="workspace.html#bindworkspacepreferences" class="tsd-kind-icon">bind<wbr>Workspace<wbr>Preferences</a>
 					</li>
 					<li class=" tsd-kind-reference tsd-parent-kind-module">
@@ -706,6 +846,9 @@
 					</li>
 					<li class=" tsd-kind-enum tsd-parent-kind-module">
 						<a href="../enums/workspace.workspacestates-1.html" class="tsd-kind-icon">Workspace<wbr>States</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-parent-kind-module">
+						<a href="../enums/workspace.workspacetrustprompt.html" class="tsd-kind-icon">Workspace<wbr>Trust<wbr>Prompt</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="../classes/workspace.commonworkspaceutils-1.html" class="tsd-kind-icon">Common<wbr>Workspace<wbr>Utils</a>
@@ -771,6 +914,9 @@
 						<a href="../classes/workspace.workspacestorageservice.html" class="tsd-kind-icon">Workspace<wbr>Storage<wbr>Service</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/workspace.workspacetrustservice-1.html" class="tsd-kind-icon">Workspace<wbr>Trust<wbr>Service</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="../classes/workspace.workspaceurilabelprovidercontribution.html" class="tsd-kind-icon">Workspace<wbr>Uri<wbr>Label<wbr>Provider<wbr>Contribution</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-module">
@@ -797,6 +943,9 @@
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="../interfaces/workspace.workspaceserver-1.html" class="tsd-kind-icon">Workspace<wbr>Server</a>
 					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/workspace.workspacetrustconfiguration.html" class="tsd-kind-icon">Workspace<wbr>Trust<wbr>Configuration</a>
+					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
 						<a href="workspace.html#workbenchstate-1" class="tsd-kind-icon">Workbench<wbr>State</a>
 					</li>
@@ -808,6 +957,9 @@
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
 						<a href="workspace.html#workspacestate-1" class="tsd-kind-icon">Workspace<wbr>State</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="workspace.html#workspacetrustpreferences" class="tsd-kind-icon">Workspace<wbr>Trust<wbr>Preferences</a>
 					</li>
 					<li class=" tsd-kind-property tsd-parent-kind-module">
 						<a href="workspace.html#default" class="tsd-kind-icon">default</a>
@@ -822,6 +974,15 @@
 						<a href="workspace.html#vscode_ext-1" class="tsd-kind-icon">VSCODE_<wbr>EXT</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="workspace.html#workspace_trust_empty_window" class="tsd-kind-icon">WORKSPACE_<wbr>TRUST_<wbr>EMPTY_<wbr>WINDOW</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="workspace.html#workspace_trust_enabled" class="tsd-kind-icon">WORKSPACE_<wbr>TRUST_<wbr>ENABLED</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="workspace.html#workspace_trust_startup_prompt" class="tsd-kind-icon">WORKSPACE_<wbr>TRUST_<wbr>STARTUP_<wbr>PROMPT</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
 						<a href="workspace.html#workspacepreferencecontribution-1" class="tsd-kind-icon">Workspace<wbr>Preference<wbr>Contribution</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-module">
@@ -829,6 +990,12 @@
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-module">
 						<a href="workspace.html#workspaceserver-2" class="tsd-kind-icon">Workspace<wbr>Server</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="workspace.html#workspacetrustpreferencecontribution" class="tsd-kind-icon">Workspace<wbr>Trust<wbr>Preference<wbr>Contribution</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="workspace.html#workspacetrustpreferences-1" class="tsd-kind-icon">Workspace<wbr>Trust<wbr>Preferences</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-module">
 						<a href="workspace.html#workspacepath-1" class="tsd-kind-icon">workspace<wbr>Path</a>
@@ -842,11 +1009,20 @@
 					<li class=" tsd-kind-variable tsd-parent-kind-module">
 						<a href="workspace.html#workspaceschemaid" class="tsd-kind-icon">workspace<wbr>Schema<wbr>Id</a>
 					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="workspace.html#workspacetrustpreferenceschema" class="tsd-kind-icon">workspace<wbr>Trust<wbr>Preference<wbr>Schema</a>
+					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="workspace.html#bindworkspacepreferences-1" class="tsd-kind-icon">bind<wbr>Workspace<wbr>Preferences</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="workspace.html#bindworkspacetrustpreferences" class="tsd-kind-icon">bind<wbr>Workspace<wbr>Trust<wbr>Preferences</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="workspace.html#createworkspacepreferences-1" class="tsd-kind-icon">create<wbr>Workspace<wbr>Preferences</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="workspace.html#createworkspacetrustpreferences" class="tsd-kind-icon">create<wbr>Workspace<wbr>Trust<wbr>Preferences</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="workspace.html#gettemporaryworkspacefileuri-1" class="tsd-kind-icon">get<wbr>Temporary<wbr>Workspace<wbr>File<wbr>Uri</a>

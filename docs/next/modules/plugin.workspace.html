@@ -74,6 +74,7 @@
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-variable tsd-parent-kind-namespace"><a href="plugin.workspace.html#fs" class="tsd-kind-icon">fs</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-namespace"><a href="plugin.workspace.html#istrusted" class="tsd-kind-icon">is<wbr>Trusted</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-namespace"><a href="plugin.workspace.html#name" class="tsd-kind-icon">name</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-namespace"><a href="plugin.workspace.html#rootpath" class="tsd-kind-icon">root<wbr>Path</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-namespace"><a href="plugin.workspace.html#textdocuments" class="tsd-kind-icon">text<wbr>Documents</a></li>
@@ -97,6 +98,7 @@
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="plugin.workspace.html#ondidclosetextdocument" class="tsd-kind-icon">on<wbr>Did<wbr>Close<wbr>Text<wbr>Document</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="plugin.workspace.html#ondidcreatefiles" class="tsd-kind-icon">on<wbr>Did<wbr>Create<wbr>Files</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="plugin.workspace.html#ondiddeletefiles" class="tsd-kind-icon">on<wbr>Did<wbr>Delete<wbr>Files</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="plugin.workspace.html#ondidgrantworkspacetrust" class="tsd-kind-icon">on<wbr>Did<wbr>Grant<wbr>Workspace<wbr>Trust</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="plugin.workspace.html#ondidopentextdocument" class="tsd-kind-icon">on<wbr>Did<wbr>Open<wbr>Text<wbr>Document</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="plugin.workspace.html#ondidrenamefiles" class="tsd-kind-icon">on<wbr>Did<wbr>Rename<wbr>Files</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="plugin.workspace.html#ondidsavetextdocument" class="tsd-kind-icon">on<wbr>Did<wbr>Save<wbr>Text<wbr>Document</a></li>
@@ -110,6 +112,7 @@
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="plugin.workspace.html#registertaskprovider" class="tsd-kind-icon">register<wbr>Task<wbr>Provider</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="plugin.workspace.html#registertextdocumentcontentprovider" class="tsd-kind-icon">register<wbr>Text<wbr>Document<wbr>Content<wbr>Provider</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="plugin.workspace.html#registertimelineprovider" class="tsd-kind-icon">register<wbr>Timeline<wbr>Provider</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="plugin.workspace.html#requestworkspacetrust" class="tsd-kind-icon">request<wbr>Workspace<wbr>Trust</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="plugin.workspace.html#saveall" class="tsd-kind-icon">save<wbr>All</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="plugin.workspace.html#updateworkspacefolders" class="tsd-kind-icon">update<wbr>Workspace<wbr>Folders</a></li>
 							</ul>
@@ -125,7 +128,7 @@
 					<div class="tsd-signature tsd-kind-icon">fs<span class="tsd-signature-symbol">:</span> <a href="../interfaces/plugin.filesystem.html" class="tsd-signature-type" data-tsd-kind="Interface">FileSystem</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5644">packages/plugin/src/theia.d.ts:5644</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5644">packages/plugin/src/theia.d.ts:5644</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -138,12 +141,27 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-namespace">
+					<a name="istrusted" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> is<wbr>Trusted</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Trusted<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L6056">packages/plugin/src/theia.d.ts:6056</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>When true, the user has explicitly trusted the contents of the workspace.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-namespace">
 					<a name="name" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagLet">Let</span> name</h3>
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5686">packages/plugin/src/theia.d.ts:5686</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5686">packages/plugin/src/theia.d.ts:5686</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -163,7 +181,7 @@
 					<div class="tsd-signature tsd-kind-icon">root<wbr>Path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5654">packages/plugin/src/theia.d.ts:5654</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5654">packages/plugin/src/theia.d.ts:5654</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -186,7 +204,7 @@
 					<div class="tsd-signature tsd-kind-icon">text<wbr>Documents<span class="tsd-signature-symbol">:</span> <a href="../interfaces/plugin.textdocument.html" class="tsd-signature-type" data-tsd-kind="Interface">TextDocument</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5698">packages/plugin/src/theia.d.ts:5698</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5698">packages/plugin/src/theia.d.ts:5698</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -205,7 +223,7 @@
 					<div class="tsd-signature tsd-kind-icon">workspace<wbr>File<span class="tsd-signature-symbol">:</span> <a href="../classes/plugin.uri.html" class="tsd-signature-type" data-tsd-kind="Class">Uri</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5678">packages/plugin/src/theia.d.ts:5678</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5678">packages/plugin/src/theia.d.ts:5678</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -232,7 +250,7 @@
 					<div class="tsd-signature tsd-kind-icon">workspace<wbr>Folders<span class="tsd-signature-symbol">:</span> <a href="../interfaces/plugin.workspacefolder.html" class="tsd-signature-type" data-tsd-kind="Interface">WorkspaceFolder</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5662">packages/plugin/src/theia.d.ts:5662</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5662">packages/plugin/src/theia.d.ts:5662</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -259,7 +277,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5961">packages/plugin/src/theia.d.ts:5961</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5961">packages/plugin/src/theia.d.ts:5961</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -299,7 +317,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5997">packages/plugin/src/theia.d.ts:5997</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5997">packages/plugin/src/theia.d.ts:5997</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -341,7 +359,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5903">packages/plugin/src/theia.d.ts:5903</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5903">packages/plugin/src/theia.d.ts:5903</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -373,7 +391,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5925">packages/plugin/src/theia.d.ts:5925</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5925">packages/plugin/src/theia.d.ts:5925</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -433,7 +451,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5934">packages/plugin/src/theia.d.ts:5934</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5934">packages/plugin/src/theia.d.ts:5934</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -475,7 +493,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5881">packages/plugin/src/theia.d.ts:5881</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5881">packages/plugin/src/theia.d.ts:5881</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -517,7 +535,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5983">packages/plugin/src/theia.d.ts:5983</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5983">packages/plugin/src/theia.d.ts:5983</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -552,7 +570,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5886">packages/plugin/src/theia.d.ts:5886</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5886">packages/plugin/src/theia.d.ts:5886</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -604,7 +622,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5738">packages/plugin/src/theia.d.ts:5738</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5738">packages/plugin/src/theia.d.ts:5738</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -658,7 +676,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5691">packages/plugin/src/theia.d.ts:5691</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5691">packages/plugin/src/theia.d.ts:5691</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -710,7 +728,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5731">packages/plugin/src/theia.d.ts:5731</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5731">packages/plugin/src/theia.d.ts:5731</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -765,7 +783,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5780">packages/plugin/src/theia.d.ts:5780</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5780">packages/plugin/src/theia.d.ts:5780</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -821,7 +839,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5804">packages/plugin/src/theia.d.ts:5804</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5804">packages/plugin/src/theia.d.ts:5804</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -869,6 +887,58 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="ondidgrantworkspacetrust" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> on<wbr>Did<wbr>Grant<wbr>Workspace<wbr>Trust</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Did<wbr>Grant<wbr>Workspace<wbr>Trust<span class="tsd-signature-symbol">(</span>listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span>, thisArgs<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, disposables<span class="tsd-signature-symbol">?: </span><a href="../classes/plugin.disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/plugin.disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L6063">packages/plugin/src/theia.d.ts:6063</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Event that fires when the current workspace has been trusted.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>listener: <span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>e: <span class="tsd-signature-type">void</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> thisArgs: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> disposables: <a href="../classes/plugin.disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/plugin.disposable.html" class="tsd-signature-type" data-tsd-kind="Class">Disposable</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
 					<a name="ondidopentextdocument" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> on<wbr>Did<wbr>Open<wbr>Text<wbr>Document</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
@@ -878,7 +948,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5722">packages/plugin/src/theia.d.ts:5722</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5722">packages/plugin/src/theia.d.ts:5722</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -937,7 +1007,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5828">packages/plugin/src/theia.d.ts:5828</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5828">packages/plugin/src/theia.d.ts:5828</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -994,7 +1064,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5758">packages/plugin/src/theia.d.ts:5758</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5758">packages/plugin/src/theia.d.ts:5758</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1046,7 +1116,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5770">packages/plugin/src/theia.d.ts:5770</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5770">packages/plugin/src/theia.d.ts:5770</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1103,7 +1173,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5792">packages/plugin/src/theia.d.ts:5792</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5792">packages/plugin/src/theia.d.ts:5792</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1160,7 +1230,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5816">packages/plugin/src/theia.d.ts:5816</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5816">packages/plugin/src/theia.d.ts:5816</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1217,7 +1287,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5753">packages/plugin/src/theia.d.ts:5753</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5753">packages/plugin/src/theia.d.ts:5753</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1280,7 +1350,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5847">packages/plugin/src/theia.d.ts:5847</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5847">packages/plugin/src/theia.d.ts:5847</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1314,7 +1384,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5856">packages/plugin/src/theia.d.ts:5856</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5856">packages/plugin/src/theia.d.ts:5856</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1342,7 +1412,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5866">packages/plugin/src/theia.d.ts:5866</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5866">packages/plugin/src/theia.d.ts:5866</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1384,7 +1454,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5974">packages/plugin/src/theia.d.ts:5974</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5974">packages/plugin/src/theia.d.ts:5974</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1438,7 +1508,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia-proposed.d.ts#L590">packages/plugin/src/theia-proposed.d.ts:590</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia-proposed.d.ts#L590">packages/plugin/src/theia-proposed.d.ts:590</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1461,7 +1531,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L6051">packages/plugin/src/theia.d.ts:6051</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L6051">packages/plugin/src/theia.d.ts:6051</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1504,7 +1574,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5709">packages/plugin/src/theia.d.ts:5709</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5709">packages/plugin/src/theia.d.ts:5709</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1543,7 +1613,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia-proposed.d.ts#L739">packages/plugin/src/theia-proposed.d.ts:739</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia-proposed.d.ts#L739">packages/plugin/src/theia-proposed.d.ts:739</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1575,6 +1645,29 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="requestworkspacetrust" class="tsd-anchor"></a>
+					<h3>request<wbr>Workspace<wbr>Trust</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">request<wbr>Workspace<wbr>Trust<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/plugin.workspacetrustrequestoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">WorkspaceTrustRequestOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L6058">packages/plugin/src/theia.d.ts:6058</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/plugin.workspacetrustrequestoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">WorkspaceTrustRequestOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
 					<a name="saveall" class="tsd-anchor"></a>
 					<h3>save<wbr>All</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
@@ -1584,7 +1677,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L5943">packages/plugin/src/theia.d.ts:5943</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L5943">packages/plugin/src/theia.d.ts:5943</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1616,7 +1709,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/2faa18b0f6b/packages/plugin/src/theia.d.ts#L6040">packages/plugin/src/theia.d.ts:6040</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin/src/theia.d.ts#L6040">packages/plugin/src/theia.d.ts:6040</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1727,6 +1820,9 @@
 						<a href="plugin.workspace.html#fs" class="tsd-kind-icon">fs</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-namespace">
+						<a href="plugin.workspace.html#istrusted" class="tsd-kind-icon">is<wbr>Trusted</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-namespace">
 						<a href="plugin.workspace.html#name" class="tsd-kind-icon">name</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-namespace">
@@ -1781,6 +1877,9 @@
 						<a href="plugin.workspace.html#ondiddeletefiles" class="tsd-kind-icon">on<wbr>Did<wbr>Delete<wbr>Files</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="plugin.workspace.html#ondidgrantworkspacetrust" class="tsd-kind-icon">on<wbr>Did<wbr>Grant<wbr>Workspace<wbr>Trust</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
 						<a href="plugin.workspace.html#ondidopentextdocument" class="tsd-kind-icon">on<wbr>Did<wbr>Open<wbr>Text<wbr>Document</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace">
@@ -1818,6 +1917,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace">
 						<a href="plugin.workspace.html#registertimelineprovider" class="tsd-kind-icon">register<wbr>Timeline<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="plugin.workspace.html#requestworkspacetrust" class="tsd-kind-icon">request<wbr>Workspace<wbr>Trust</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace">
 						<a href="plugin.workspace.html#saveall" class="tsd-kind-icon">save<wbr>All</a>
