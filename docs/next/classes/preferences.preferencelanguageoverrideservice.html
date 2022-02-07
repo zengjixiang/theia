@@ -96,6 +96,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="preferences.preferencelanguageoverrideservice.html#addoverrideidentifier" class="tsd-kind-icon">add<wbr>Override<wbr>Identifier</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="preferences.preferencelanguageoverrideservice.html#computeoverridepatternpropertieskey" class="tsd-kind-icon">compute<wbr>Override<wbr>Pattern<wbr>Properties<wbr>Key</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="preferences.preferencelanguageoverrideservice.html#getoverridepreferencenames" class="tsd-kind-icon">get<wbr>Override<wbr>Preference<wbr>Names</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="preferences.preferencelanguageoverrideservice.html#marklanguageoverride" class="tsd-kind-icon">mark<wbr>Language<wbr>Override</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="preferences.preferencelanguageoverrideservice.html#overriddenpreferencename" class="tsd-kind-icon">overridden<wbr>Preference<wbr>Name</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="preferences.preferencelanguageoverrideservice.html#overridepreferencename" class="tsd-kind-icon">override<wbr>Preference<wbr>Name</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="preferences.preferencelanguageoverrideservice.html#removeoverrideidentifier" class="tsd-kind-icon">remove<wbr>Override<wbr>Identifier</a></li>
@@ -147,7 +148,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in packages/core/lib/browser/preferences/preference-language-override-service.d.ts:37</li>
+									<li>Defined in packages/core/lib/browser/preferences/preference-language-override-service.d.ts:48</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -171,7 +172,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in packages/core/lib/browser/preferences/preference-language-override-service.d.ts:31</li>
+									<li>Defined in packages/core/lib/browser/preferences/preference-language-override-service.d.ts:42</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h4>
@@ -188,7 +189,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in packages/core/lib/browser/preferences/preference-language-override-service.d.ts:32</li>
+									<li>Defined in packages/core/lib/browser/preferences/preference-language-override-service.d.ts:43</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -202,6 +203,33 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="marklanguageoverride" class="tsd-anchor"></a>
+					<h3>mark<wbr>Language<wbr>Override</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">mark<wbr>Language<wbr>Override<span class="tsd-signature-symbol">(</span>overrideIdentifier<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in packages/core/lib/browser/preferences/preference-language-override-service.d.ts:33</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>overrideIdentifier: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the language id associated for a language override, e.g. <code>typescript</code></p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<p>the form used to mark language overrides in preference files, e.g. <code>[typescript]</code></p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="overriddenpreferencename" class="tsd-anchor"></a>
 					<h3>overridden<wbr>Preference<wbr>Name</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -211,7 +239,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in packages/core/lib/browser/preferences/preference-language-override-service.d.ts:30</li>
+									<li>Defined in packages/core/lib/browser/preferences/preference-language-override-service.d.ts:41</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -221,6 +249,7 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/preferences.overridepreferencename-1.html" class="tsd-signature-type" data-tsd-kind="Interface">OverridePreferenceName</a></h4>
+							<p>an OverridePreferenceName if the <code>name</code> contains a language override, e.g. [typescript].editor.tabSize.</p>
 						</li>
 					</ul>
 				</section>
@@ -234,7 +263,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in packages/core/lib/browser/preferences/preference-language-override-service.d.ts:29</li>
+									<li>Defined in packages/core/lib/browser/preferences/preference-language-override-service.d.ts:37</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -244,6 +273,7 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<p>the flat JSON path to an overridden preference, e.g. [typescript].editor.tabSize.</p>
 						</li>
 					</ul>
 				</section>
@@ -257,7 +287,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in packages/core/lib/browser/preferences/preference-language-override-service.d.ts:42</li>
+									<li>Defined in packages/core/lib/browser/preferences/preference-language-override-service.d.ts:53</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -363,6 +393,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="preferences.preferencelanguageoverrideservice.html#getoverridepreferencenames" class="tsd-kind-icon">get<wbr>Override<wbr>Preference<wbr>Names</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="preferences.preferencelanguageoverrideservice.html#marklanguageoverride" class="tsd-kind-icon">mark<wbr>Language<wbr>Override</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="preferences.preferencelanguageoverrideservice.html#overriddenpreferencename" class="tsd-kind-icon">overridden<wbr>Preference<wbr>Name</a>

@@ -90,13 +90,16 @@
 								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="plugin_ext.webviewsextimpl.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
+						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="plugin_ext.webviewsextimpl.html#initdata" class="tsd-kind-icon">init<wbr>Data</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="plugin_ext.webviewsextimpl.html#ondiddispose" class="tsd-kind-icon">on<wbr>Did<wbr>Dispose</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="plugin_ext.webviewsextimpl.html#ondiddisposeemitter" class="tsd-kind-icon">on<wbr>Did<wbr>Dispose<wbr>Emitter</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="plugin_ext.webviewsextimpl.html#proxy" class="tsd-kind-icon">proxy</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="plugin_ext.webviewsextimpl.html#serializers" class="tsd-kind-icon">serializers</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="plugin_ext.webviewsextimpl.html#webviewpanels" class="tsd-kind-icon">webview<wbr>Panels</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="plugin_ext.webviewsextimpl.html#webviews" class="tsd-kind-icon">webviews</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -106,8 +109,11 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="plugin_ext.webviewsextimpl.html#_ondidchangewebviewpanelviewstate" class="tsd-kind-icon">$on<wbr>Did<wbr>Change<wbr>Webview<wbr>Panel<wbr>View<wbr>State</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="plugin_ext.webviewsextimpl.html#_ondiddisposewebviewpanel" class="tsd-kind-icon">$on<wbr>Did<wbr>Dispose<wbr>Webview<wbr>Panel</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="plugin_ext.webviewsextimpl.html#_onmessage" class="tsd-kind-icon">$on<wbr>Message</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="plugin_ext.webviewsextimpl.html#createnewwebview" class="tsd-kind-icon">create<wbr>New<wbr>Webview</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="plugin_ext.webviewsextimpl.html#createwebview" class="tsd-kind-icon">create<wbr>Webview</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="plugin_ext.webviewsextimpl.html#createwebviewpanel" class="tsd-kind-icon">create<wbr>Webview<wbr>Panel</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="plugin_ext.webviewsextimpl.html#deletewebview" class="tsd-kind-icon">delete<wbr>Webview</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="plugin_ext.webviewsextimpl.html#getwebview" class="tsd-kind-icon">get<wbr>Webview</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="plugin_ext.webviewsextimpl.html#getwebviewpanel" class="tsd-kind-icon">get<wbr>Webview<wbr>Panel</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="plugin_ext.webviewsextimpl.html#init" class="tsd-kind-icon">init</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="plugin_ext.webviewsextimpl.html#registerwebviewpanelserializer" class="tsd-kind-icon">register<wbr>Webview<wbr>Panel<wbr>Serializer</a></li>
@@ -128,7 +134,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin-ext/src/plugin/webviews.ts#L34">packages/plugin-ext/src/plugin/webviews.ts:34</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/cfc7296df85/packages/plugin-ext/src/plugin/webviews.ts#L38">packages/plugin-ext/src/plugin/webviews.ts:38</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -145,7 +151,7 @@
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a name="initdata" class="tsd-anchor"></a>
@@ -153,7 +159,27 @@
 					<div class="tsd-signature tsd-kind-icon">init<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/plugin_ext.webviewinitdata-1.html" class="tsd-signature-type" data-tsd-kind="Interface">WebviewInitData</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin-ext/src/plugin/webviews.ts#L34">packages/plugin-ext/src/plugin/webviews.ts:34</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/cfc7296df85/packages/plugin-ext/src/plugin/webviews.ts#L35">packages/plugin-ext/src/plugin/webviews.ts:35</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="ondiddispose" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> on<wbr>Did<wbr>Dispose</h3>
+					<div class="tsd-signature tsd-kind-icon">on<wbr>Did<wbr>Dispose<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = ...</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/cfc7296df85/packages/plugin-ext/src/plugin/webviews.ts#L38">packages/plugin-ext/src/plugin/webviews.ts:38</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="ondiddisposeemitter" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> on<wbr>Did<wbr>Dispose<wbr>Emitter</h3>
+					<div class="tsd-signature tsd-kind-icon">on<wbr>Did<wbr>Dispose<wbr>Emitter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Emitter</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = ...</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/cfc7296df85/packages/plugin-ext/src/plugin/webviews.ts#L37">packages/plugin-ext/src/plugin/webviews.ts:37</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -163,7 +189,7 @@
 					<div class="tsd-signature tsd-kind-icon">proxy<span class="tsd-signature-symbol">:</span> <a href="../interfaces/plugin_ext.webviewsmain-1.html" class="tsd-signature-type" data-tsd-kind="Interface">WebviewsMain</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin-ext/src/plugin/webviews.ts#L28">packages/plugin-ext/src/plugin/webviews.ts:28</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/cfc7296df85/packages/plugin-ext/src/plugin/webviews.ts#L28">packages/plugin-ext/src/plugin/webviews.ts:28</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -173,7 +199,7 @@
 					<div class="tsd-signature tsd-kind-icon">serializers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{ </span>plugin<span class="tsd-signature-symbol">: </span><a href="../interfaces/plugin_ext.plugin-2.html" class="tsd-signature-type" data-tsd-kind="Interface">Plugin</a><span class="tsd-signature-symbol">; </span>serializer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebviewPanelSerializer</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = ...</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin-ext/src/plugin/webviews.ts#L30">packages/plugin-ext/src/plugin/webviews.ts:30</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/cfc7296df85/packages/plugin-ext/src/plugin/webviews.ts#L31">packages/plugin-ext/src/plugin/webviews.ts:31</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -183,7 +209,17 @@
 					<div class="tsd-signature tsd-kind-icon">webview<wbr>Panels<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="plugin_ext.webviewpanelimpl.html" class="tsd-signature-type" data-tsd-kind="Class">WebviewPanelImpl</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = ...</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin-ext/src/plugin/webviews.ts#L29">packages/plugin-ext/src/plugin/webviews.ts:29</a></li>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/cfc7296df85/packages/plugin-ext/src/plugin/webviews.ts#L29">packages/plugin-ext/src/plugin/webviews.ts:29</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="webviews" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> webviews</h3>
+					<div class="tsd-signature tsd-kind-icon">webviews<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="plugin_ext.webviewimpl.html" class="tsd-signature-type" data-tsd-kind="Class">WebviewImpl</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = ...</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/cfc7296df85/packages/plugin-ext/src/plugin/webviews.ts#L30">packages/plugin-ext/src/plugin/webviews.ts:30</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -201,7 +237,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/plugin_ext.webviewsext-1.html">WebviewsExt</a>.<a href="../interfaces/plugin_ext.webviewsext-1.html#_deserializewebviewpanel">$deserializeWebviewPanel</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin-ext/src/plugin/webviews.ts#L74">packages/plugin-ext/src/plugin/webviews.ts:74</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/cfc7296df85/packages/plugin-ext/src/plugin/webviews.ts#L83">packages/plugin-ext/src/plugin/webviews.ts:83</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -240,7 +276,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/plugin_ext.webviewsext-1.html">WebviewsExt</a>.<a href="../interfaces/plugin_ext.webviewsext-1.html#_ondidchangewebviewpanelviewstate">$onDidChangeWebviewPanelViewState</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin-ext/src/plugin/webviews.ts#L54">packages/plugin-ext/src/plugin/webviews.ts:54</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/cfc7296df85/packages/plugin-ext/src/plugin/webviews.ts#L63">packages/plugin-ext/src/plugin/webviews.ts:63</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -267,7 +303,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/plugin_ext.webviewsext-1.html">WebviewsExt</a>.<a href="../interfaces/plugin_ext.webviewsext-1.html#_ondiddisposewebviewpanel">$onDidDisposeWebviewPanel</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin-ext/src/plugin/webviews.ts#L66">packages/plugin-ext/src/plugin/webviews.ts:66</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/cfc7296df85/packages/plugin-ext/src/plugin/webviews.ts#L75">packages/plugin-ext/src/plugin/webviews.ts:75</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -291,7 +327,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/plugin_ext.webviewsext-1.html">WebviewsExt</a>.<a href="../interfaces/plugin_ext.webviewsext-1.html#_onmessage">$onMessage</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin-ext/src/plugin/webviews.ts#L48">packages/plugin-ext/src/plugin/webviews.ts:48</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/cfc7296df85/packages/plugin-ext/src/plugin/webviews.ts#L52">packages/plugin-ext/src/plugin/webviews.ts:52</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -308,6 +344,35 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="createnewwebview" class="tsd-anchor"></a>
+					<h3>create<wbr>New<wbr>Webview</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>New<wbr>Webview<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebviewPanelOptions</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">WebviewOptions</span>, plugin<span class="tsd-signature-symbol">: </span><a href="../interfaces/plugin_ext.plugin-2.html" class="tsd-signature-type" data-tsd-kind="Interface">Plugin</a>, viewId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plugin_ext.webviewimpl.html" class="tsd-signature-type" data-tsd-kind="Class">WebviewImpl</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/cfc7296df85/packages/plugin-ext/src/plugin/webviews.ts#L140">packages/plugin-ext/src/plugin/webviews.ts:140</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>options: <span class="tsd-signature-type">WebviewPanelOptions</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">WebviewOptions</span></h5>
+								</li>
+								<li>
+									<h5>plugin: <a href="../interfaces/plugin_ext.plugin-2.html" class="tsd-signature-type" data-tsd-kind="Interface">Plugin</a></h5>
+								</li>
+								<li>
+									<h5>viewId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="plugin_ext.webviewimpl.html" class="tsd-signature-type" data-tsd-kind="Class">WebviewImpl</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="createwebview" class="tsd-anchor"></a>
 					<h3>create<wbr>Webview</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -317,7 +382,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin-ext/src/plugin/webviews.ts#L98">packages/plugin-ext/src/plugin/webviews.ts:98</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/cfc7296df85/packages/plugin-ext/src/plugin/webviews.ts#L107">packages/plugin-ext/src/plugin/webviews.ts:107</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -352,7 +417,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin-ext/src/plugin/webviews.ts#L113">packages/plugin-ext/src/plugin/webviews.ts:113</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/cfc7296df85/packages/plugin-ext/src/plugin/webviews.ts#L122">packages/plugin-ext/src/plugin/webviews.ts:122</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -381,6 +446,52 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="deletewebview" class="tsd-anchor"></a>
+					<h3>delete<wbr>Webview</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">delete<wbr>Webview<span class="tsd-signature-symbol">(</span>handle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/cfc7296df85/packages/plugin-ext/src/plugin/webviews.ts#L178">packages/plugin-ext/src/plugin/webviews.ts:178</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>handle: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getwebview" class="tsd-anchor"></a>
+					<h3>get<wbr>Webview</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Webview<span class="tsd-signature-symbol">(</span>handle<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="plugin_ext.webviewimpl.html" class="tsd-signature-type" data-tsd-kind="Class">WebviewImpl</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/cfc7296df85/packages/plugin-ext/src/plugin/webviews.ts#L182">packages/plugin-ext/src/plugin/webviews.ts:182</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>handle: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="plugin_ext.webviewimpl.html" class="tsd-signature-type" data-tsd-kind="Class">WebviewImpl</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="getwebviewpanel" class="tsd-anchor"></a>
 					<h3>get<wbr>Webview<wbr>Panel</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -390,7 +501,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin-ext/src/plugin/webviews.ts#L149">packages/plugin-ext/src/plugin/webviews.ts:149</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/cfc7296df85/packages/plugin-ext/src/plugin/webviews.ts#L171">packages/plugin-ext/src/plugin/webviews.ts:171</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -413,7 +524,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin-ext/src/plugin/webviews.ts#L43">packages/plugin-ext/src/plugin/webviews.ts:43</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/cfc7296df85/packages/plugin-ext/src/plugin/webviews.ts#L47">packages/plugin-ext/src/plugin/webviews.ts:47</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -436,7 +547,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/1425de1d099/packages/plugin-ext/src/plugin/webviews.ts#L131">packages/plugin-ext/src/plugin/webviews.ts:131</a></li>
+									<li>Defined in <a href="https://github.com/eclipse-theia/theia/blob/cfc7296df85/packages/plugin-ext/src/plugin/webviews.ts#L153">packages/plugin-ext/src/plugin/webviews.ts:153</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -609,6 +720,12 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="plugin_ext.webviewsextimpl.html#initdata" class="tsd-kind-icon">init<wbr>Data</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="plugin_ext.webviewsextimpl.html#ondiddispose" class="tsd-kind-icon">on<wbr>Did<wbr>Dispose</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="plugin_ext.webviewsextimpl.html#ondiddisposeemitter" class="tsd-kind-icon">on<wbr>Did<wbr>Dispose<wbr>Emitter</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="plugin_ext.webviewsextimpl.html#proxy" class="tsd-kind-icon">proxy</a>
 							</li>
@@ -617,6 +734,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="plugin_ext.webviewsextimpl.html#webviewpanels" class="tsd-kind-icon">webview<wbr>Panels</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="plugin_ext.webviewsextimpl.html#webviews" class="tsd-kind-icon">webviews</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="plugin_ext.webviewsextimpl.html#_deserializewebviewpanel" class="tsd-kind-icon">$deserialize<wbr>Webview<wbr>Panel</a>
@@ -631,10 +751,19 @@
 								<a href="plugin_ext.webviewsextimpl.html#_onmessage" class="tsd-kind-icon">$on<wbr>Message</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="plugin_ext.webviewsextimpl.html#createnewwebview" class="tsd-kind-icon">create<wbr>New<wbr>Webview</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="plugin_ext.webviewsextimpl.html#createwebview" class="tsd-kind-icon">create<wbr>Webview</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="plugin_ext.webviewsextimpl.html#createwebviewpanel" class="tsd-kind-icon">create<wbr>Webview<wbr>Panel</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="plugin_ext.webviewsextimpl.html#deletewebview" class="tsd-kind-icon">delete<wbr>Webview</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="plugin_ext.webviewsextimpl.html#getwebview" class="tsd-kind-icon">get<wbr>Webview</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="plugin_ext.webviewsextimpl.html#getwebviewpanel" class="tsd-kind-icon">get<wbr>Webview<wbr>Panel</a>
@@ -670,6 +799,7 @@
 				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
 				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
 				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
