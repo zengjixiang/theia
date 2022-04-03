@@ -25,7 +25,7 @@ import { HostedPluginServerImpl } from './plugin-service';
 import { HostedPluginReader } from './plugin-reader';
 import { HostedPluginSupport } from './hosted-plugin';
 import { TheiaPluginScanner } from './scanners/scanner-theia';
-import { HostedPluginServer, PluginScanner, HostedPluginClient, hostedServicePath, PluginDeployerHandler, PluginHostEnvironmentVariable } from '../../common/plugin-protocol';
+import { HostedPluginServer, PluginScanner, hostedServicePath, PluginDeployerHandler, PluginHostEnvironmentVariable } from '../../common/plugin-protocol';
 import { GrammarsReader } from './scanners/grammars-reader';
 import { HostedPluginProcess, HostedPluginProcessConfiguration } from './hosted-plugin-process';
 import { ExtPluginApiProvider } from '../../common/plugin-ext-api-contribution';
@@ -42,13 +42,8 @@ const commonHostedConnectionModule = ConnectionContainerModule.create(({ bind, b
     bindContributionProvider(bind, Symbol.for(ExtPluginApiProvider));
     bindContributionProvider(bind, PluginHostEnvironmentVariable);
 
-    bind(HostedPluginServerImpl).toSelf().inSingletonScope();
-    bind(HostedPluginServer).toService(HostedPluginServerImpl);
-    bindBackendService<HostedPluginServer, HostedPluginClient>(hostedServicePath, HostedPluginServer, (server, client) => {
-        server.setClient(client);
-        client.onDidCloseConnection(() => server.dispose());
-        return server;
-    });
+    bind(HostedPluginServer).to(HostedPluginServerImpl).inSingletonScope();
+    bindBackendService(hostedServicePath, HostedPluginServer);
 });
 
 export function bindCommonHostedBackend(bind: interfaces.Bind): void {

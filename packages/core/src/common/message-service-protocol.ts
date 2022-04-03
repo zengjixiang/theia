@@ -15,9 +15,10 @@
 // *****************************************************************************
 
 import { injectable } from 'inversify';
+import { servicePath } from './service-provider';
 import { CancellationToken } from './cancellation';
 
-export const messageServicePath = '/services/messageService';
+export const messageServicePath = servicePath<MessageClient>('/services/messageService');
 
 export enum MessageType {
     Error = 1,
@@ -121,9 +122,9 @@ export class MessageClient {
      *
      * To be implemented by an extension, e.g. by the messages extension.
      */
-    showMessage(message: Message): Promise<string | undefined> {
+    async showMessage(message: Message): Promise<string | undefined> {
         console.info(message.text);
-        return Promise.resolve(undefined);
+        return;
     }
 
     /**
@@ -131,9 +132,9 @@ export class MessageClient {
      *
      * To be implemented by an extension, e.g. by the messages extension.
      */
-    showProgress(progressId: string, message: ProgressMessage, cancellationToken: CancellationToken): Promise<string | undefined> {
+    async showProgress(progressId: string, message: ProgressMessage, cancellationToken: CancellationToken): Promise<string | undefined> {
         console.info(message.text);
-        return Promise.resolve(undefined);
+        return;
     }
 
     /**
@@ -141,7 +142,5 @@ export class MessageClient {
      *
      * To be implemented by an extension, e.g. by the messages extension.
      */
-    reportProgress(progressId: string, update: ProgressUpdate, message: ProgressMessage, cancellationToken: CancellationToken): Promise<void> {
-        return Promise.resolve(undefined);
-    }
+    async reportProgress(progressId: string, update: ProgressUpdate, message: ProgressMessage, cancellationToken: CancellationToken): Promise<void> { }
 }

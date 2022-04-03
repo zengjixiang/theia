@@ -26,14 +26,13 @@ import { UUID } from '@theia/core/shared/@phosphor/coreutils';
 import { injectable, inject, interfaces, named, postConstruct } from '@theia/core/shared/inversify';
 import { PluginWorker } from './plugin-worker';
 import { PluginMetadata, getPluginId, HostedPluginServer, DeployedPlugin, PluginServer } from '../../common/plugin-protocol';
-import { HostedPluginWatcher } from './hosted-plugin-watcher';
 import { MAIN_RPC_CONTEXT, PluginManagerExt, ConfigStorage, UIKind } from '../../common/plugin-api-rpc';
 import { setUpPluginApi } from '../../main/browser/main-context';
 import { RPCProtocol, RPCProtocolImpl } from '../../common/rpc-protocol';
 import {
     Disposable, DisposableCollection, Emitter, isCancelled,
     ILogger, ContributionProvider, CommandRegistry, WillExecuteCommandEvent,
-    CancellationTokenSource, JsonRpcProxy, ProgressService, nls
+    CancellationTokenSource, ProgressService, nls, Event
 } from '@theia/core';
 import { PreferenceServiceImpl, PreferenceProviderProvider } from '@theia/core/lib/browser/preferences';
 import { WorkspaceService } from '@theia/workspace/lib/browser';
@@ -83,10 +82,7 @@ export class HostedPluginSupport {
     protected readonly logger: ILogger;
 
     @inject(HostedPluginServer)
-    private readonly server: JsonRpcProxy<HostedPluginServer>;
-
-    @inject(HostedPluginWatcher)
-    private readonly watcher: HostedPluginWatcher;
+    private readonly server: HostedPluginServer;
 
     @inject(PluginContributionHandler)
     private readonly contributionHandler: PluginContributionHandler;
@@ -249,8 +245,7 @@ export class HostedPluginSupport {
     onStart(container: interfaces.Container): void {
         this.container = container;
         this.load();
-        this.watcher.onDidDeploy(() => this.load());
-        this.server.onDidOpenConnection(() => this.load());
+        this.server.onDidDeploy(() => this.load());
     }
 
     protected loadQueue: Promise<void> = Promise.resolve(undefined);
@@ -265,7 +260,8 @@ export class HostedPluginSupport {
     protected async doLoad(): Promise<void> {
         const toDisconnect = new DisposableCollection(Disposable.create(() => { /* mark as connected */ }));
         toDisconnect.push(Disposable.create(() => this.preserveWebviews()));
-        this.server.onDidCloseConnection(() => toDisconnect.dispose());
+        // TODO: do we need to replace the following line?
+        // this.server.onDidCloseConnection(() => toDisconnect.dispose());
 
         // process empty plugins as well in order to properly remove stale plugin widgets
         await this.syncPlugins();
@@ -521,16 +517,14 @@ export class HostedPluginSupport {
     }
 
     private createServerRpc(pluginHostId: string): RPCProtocol {
-        const emitter = new Emitter<string>();
-        this.watcher.onPostMessageEvent(received => {
-            if (pluginHostId === received.pluginHostId) {
-                emitter.fire(received.message);
-            }
-        });
         return new RPCProtocolImpl({
-            onMessage: emitter.event,
+            onMessage: Event.mapFilter(this.server.onMessage, (received, emit) => {
+                if (pluginHostId === received.pluginHostId) {
+                    emit(received.message);
+                }
+            }),
             send: message => {
-                this.server.onMessage(pluginHostId, message);
+                this.server.handleMessage(pluginHostId, message);
             }
         });
     }

@@ -15,8 +15,7 @@
 // *****************************************************************************
 
 import { ContainerModule } from '@theia/core/shared/inversify';
-import { bindContributionProvider } from '@theia/core';
-import { ConnectionHandler, JsonRpcConnectionHandler } from '@theia/core/lib/common/messaging';
+import { BackendAndFrontend, bindContributionProvider, ServiceContribution } from '@theia/core';
 import { BackendApplicationContribution } from '@theia/core/lib/node';
 import { bindProcessTaskRunnerModule } from './process/process-task-runner-backend-module';
 import { bindCustomTaskRunnerModule } from './custom/custom-task-runner-backend-module';
@@ -25,25 +24,21 @@ import { TaskManager } from './task-manager';
 import { TaskRunnerContribution, TaskRunnerRegistry } from './task-runner';
 import { TaskServerImpl } from './task-server';
 import { createCommonBindings } from '../common/task-common-module';
-import { TaskClient, TaskServer, taskPath } from '../common';
+import { TaskServer, taskPath } from '../common';
+
+export const TaskContainerModule = new ContainerModule(bind => {
+    bind(TaskServer).to(TaskServerImpl).inSingletonScope();
+    bind(ServiceContribution)
+        .toDynamicValue(ctx => ServiceContribution.record(
+            [taskPath, () => ctx.container.get(TaskServer)]
+        ))
+        .inSingletonScope()
+        .whenTargetNamed(BackendAndFrontend);
+});
 
 export default new ContainerModule(bind => {
-
     bind(TaskManager).toSelf().inSingletonScope();
     bind(BackendApplicationContribution).toService(TaskManager);
-
-    bind(TaskServer).to(TaskServerImpl).inSingletonScope();
-    bind(ConnectionHandler).toDynamicValue(ctx =>
-        new JsonRpcConnectionHandler<TaskClient>(taskPath, client => {
-            const taskServer = ctx.container.get<TaskServer>(TaskServer);
-            taskServer.setClient(client);
-            // when connection closes, cleanup that client of task-server
-            client.onDidCloseConnection(() => {
-                taskServer.disconnectClient(client);
-            });
-            return taskServer;
-        })
-    ).inSingletonScope();
 
     createCommonBindings(bind);
 

@@ -15,8 +15,29 @@
 // *****************************************************************************
 
 import { ContainerModule } from 'inversify';
-import { WebSocketConnectionProvider } from './ws-connection-provider';
+import { DefaultRpcProxyProvider } from '../../common/rpc';
+import { BackendAndFrontend, ConnectionProvider, ProxyProvider } from '../../common';
+import { SocketIoConnectionProvider } from './socket-io-connection-provider';
+import { JSON_RPC_ROUTE } from '../../common/json-rpc-protocol';
+import { JsonRpc } from '../../common/json-rpc';
 
 export const messagingFrontendModule = new ContainerModule(bind => {
-    bind(WebSocketConnectionProvider).toSelf().inSingletonScope();
+    bind(ProxyProvider)
+        .toDynamicValue(ctx => {
+            const jsonRpc = ctx.container.get(JsonRpc);
+            const proxyProvider = ctx.container.get(DefaultRpcProxyProvider);
+            const connectionProvider = ctx.container.getNamed(ConnectionProvider, BackendAndFrontend);
+            return proxyProvider.initialize(serviceId => {
+                const path = JSON_RPC_ROUTE.reverse({ serviceId });
+                const connection = connectionProvider.open({ path });
+                const messageConnection = jsonRpc.createMessageConnection(connection);
+                return jsonRpc.createRpcConnection(messageConnection);
+            });
+        })
+        .inSingletonScope()
+        .whenTargetNamed(BackendAndFrontend);
+    bind(ConnectionProvider)
+        .to(SocketIoConnectionProvider)
+        .inSingletonScope()
+        .whenTargetNamed(BackendAndFrontend);
 });
