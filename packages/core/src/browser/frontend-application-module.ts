@@ -122,6 +122,8 @@ import { TooltipService, TooltipServiceImpl } from './tooltip-service';
 import { bindFrontendStopwatch, bindBackendStopwatch } from './performance';
 import { SaveResourceService } from './save-resource-service';
 import { UserWorkingDirectoryProvider } from './user-working-directory-provider';
+import { WindowTitleService } from './window/window-title-service';
+import { WindowTitleUpdater } from './window/window-title-updater';
 
 export { bindResourceProvider, bindMessageService, bindPreferenceService };
 
@@ -376,6 +378,9 @@ export const frontendApplicationModule = new ContainerModule((bind, unbind, isBo
     for (const contribution of [CommandContribution, KeybindingContribution, MenuContribution]) {
         bind(contribution).toService(WindowContribution);
     }
+    bind(WindowTitleService).toSelf().inSingletonScope();
+    bind(WindowTitleUpdater).toSelf().inSingletonScope();
+    bind(FrontendApplicationContribution).toService(WindowTitleUpdater);
     bindContributionProvider(bind, BreadcrumbsContribution);
     bind(BreadcrumbsService).toSelf().inSingletonScope();
     bind(BreadcrumbsRenderer).toSelf();

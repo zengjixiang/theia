@@ -67,6 +67,14 @@ export namespace Event {
             set maxListeners(maxListeners: number) { }
         });
     }
+
+    export function combine<T>(...events: Event<T>[]): Event<T> {
+        const combined = new Emitter<T>();
+        for (const event of events) {
+            event(e => combined.fire(e));
+        }
+        return combined.event;
+    }
 }
 
 type Callback = (...args: any[]) => any;
