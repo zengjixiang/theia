@@ -124,6 +124,7 @@ import { UserWorkingDirectoryProvider } from './user-working-directory-provider'
 import { TheiaDockPanel } from './shell/theia-dock-panel';
 import { bindStatusBar } from './status-bar';
 import { MarkdownRenderer, MarkdownRendererFactory, MarkdownRendererImpl } from './markdown-rendering/markdown-renderer';
+import { StylingParticipant, StylingService } from './styling-service';
 
 export { bindResourceProvider, bindMessageService, bindPreferenceService };
 
@@ -408,4 +409,8 @@ export const frontendApplicationModule = new ContainerModule((bind, _unbind, _is
 
     bind(SaveResourceService).toSelf().inSingletonScope();
     bind(UserWorkingDirectoryProvider).toSelf().inSingletonScope();
+
+    bind(StylingService).toSelf().inSingletonScope();
+    bindContributionProvider(bind, StylingParticipant);
+    bind(FrontendApplicationContribution).toService(StylingService);
 });

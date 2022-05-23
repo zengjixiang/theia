@@ -26,6 +26,10 @@ export interface Theme {
     deactivate(): void;
 }
 
+export function isHighContrast(scheme: ThemeType): boolean {
+    return scheme === 'hc';
+}
+
 export interface ThemeChangeEvent {
     readonly newTheme: Theme;
     readonly oldTheme?: Theme;
