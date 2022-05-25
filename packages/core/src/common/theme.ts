@@ -22,8 +22,8 @@ export interface Theme {
     readonly label: string;
     readonly description?: string;
     readonly editorTheme?: string;
-    activate(): void;
-    deactivate(): void;
+    activate?(): void;
+    deactivate?(): void;
 }
 
 export function isHighContrast(scheme: ThemeType): boolean {

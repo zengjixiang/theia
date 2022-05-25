@@ -190,7 +190,7 @@ export class NotificationsContribution implements FrontendApplicationContributio
         if (focusBorder && isHighContrast(theme.type)) {
             collector.addRule(`.theia-notification-list-item:hover:not(:focus) {
                 outline: 1px dashed ${focusBorder};
-                outline-offset: -1px;
+                outline-offset: -2px;
             }
             `);
         }

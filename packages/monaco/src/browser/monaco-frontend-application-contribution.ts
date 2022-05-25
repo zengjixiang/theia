@@ -15,7 +15,7 @@
 // *****************************************************************************
 
 import { injectable, inject } from '@theia/core/shared/inversify';
-import { FrontendApplicationContribution, PreferenceSchemaProvider, QuickAccessRegistry } from '@theia/core/lib/browser';
+import { ColorTheme, CssStyleCollector, FrontendApplicationContribution, PreferenceSchemaProvider, QuickAccessRegistry, StylingParticipant } from '@theia/core/lib/browser';
 import { MonacoSnippetSuggestProvider } from './monaco-snippet-suggest-provider';
 import * as monaco from '@theia/monaco-editor-core';
 import { setSnippetSuggestSupport } from '@theia/monaco-editor-core/esm/vs/editor/contrib/suggest/browser/suggest';
@@ -29,9 +29,10 @@ import { ITextModelService } from '@theia/monaco-editor-core/esm/vs/editor/commo
 import { IContextKeyService } from '@theia/monaco-editor-core/esm/vs/platform/contextkey/common/contextkey';
 import { IContextMenuService } from '@theia/monaco-editor-core/esm/vs/platform/contextview/browser/contextView';
 import { MonacoContextMenuService } from './monaco-context-menu';
+import { isHighContrast } from '@theia/core/lib/common/theme';
 
 @injectable()
-export class MonacoFrontendApplicationContribution implements FrontendApplicationContribution {
+export class MonacoFrontendApplicationContribution implements FrontendApplicationContribution, StylingParticipant {
 
     @inject(MonacoEditorService)
     protected readonly codeEditorService: MonacoEditorService;
@@ -77,6 +78,26 @@ export class MonacoFrontendApplicationContribution implements FrontendApplicatio
             this.preferenceSchema.registerOverrideIdentifier(language.id);
             registerLanguage(language);
         };
+    }
+
+    registerThemeStyle(theme: ColorTheme, collector: CssStyleCollector): void {
+        if (isHighContrast(theme.type)) {
+            const focusBorder = theme.getColor('focusBorder');
+            if (focusBorder) {
+                // Quick input
+                collector.addRule(`
+                    .quick-input-list .monaco-list-row {
+                        outline-offset: -1px;
+                    }
+                    .quick-input-list .monaco-list-row.focused {
+                        outline: 1px dotted ${focusBorder};
+                    }
+                    .quick-input-list .monaco-list-row:hover {
+                        outline: 1px dashed ${focusBorder};
+                    }
+                `);
+            }
+        }
     }
 
 }

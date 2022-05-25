@@ -2254,38 +2254,108 @@ export class CommonFrontendContribution implements
         if (highContrast) {
             if (focusBorder) {
                 // Action labels (codicon buttons)
-                collector.addRule(`.action-label:hover {
-                    outline: 1px dashed ${focusBorder};
-                }
+                collector.addRule(`
+                    .action-label:hover {
+                        outline: 1px dashed ${focusBorder};
+                    }
                 `);
                 // Menus
                 collector.addRule(`
-                .p-Menu .p-Menu-item.p-mod-active {
-                    outline: 1px solid ${focusBorder};
-                    outline-offset: -1px;
-                }
-                .p-MenuBar .p-MenuBar-item.p-mod-active {
-                    outline: 1px dashed ${focusBorder};
-                }
-                .p-MenuBar.p-mod-active .p-MenuBar-item.p-mod-active {
-                    outline: 1px solid ${focusBorder};
-                }
+                    .p-Menu .p-Menu-item.p-mod-active {
+                        outline: 1px solid ${focusBorder};
+                        outline-offset: -1px;
+                    }
+                    .p-MenuBar .p-MenuBar-item.p-mod-active {
+                        outline: 1px dashed ${focusBorder};
+                    }
+                    .p-MenuBar.p-mod-active .p-MenuBar-item.p-mod-active {
+                        outline: 1px solid ${focusBorder};
+                    }
+                `);
+                // Tabs
+                collector.addRule(`
+                    #theia-main-content-panel .p-TabBar .p-TabBar-tab {
+                        outline-offset: -4px;
+                    }
+                    #theia-main-content-panel .p-TabBar .p-TabBar-tab.p-mod-current {
+                        outline: 1px solid ${focusBorder};
+                    }
+                    #theia-main-content-panel .p-TabBar .p-TabBar-tab:not(.p-mod-current):hover {
+                        outline: 1px dashed ${focusBorder};
+                    }
+                `);
+                // Trees
+                collector.addRule(`
+                    .theia-TreeNode {
+                        outline-offset: -1px;
+                    }
+                    .theia-TreeNode:hover {
+                        outline: 1px dashed ${focusBorder};
+                    }
+                    .theia-Tree .theia-TreeNode.theia-mod-selected {
+                        outline: 1px dotted ${focusBorder};
+                    }
+                    .theia-Tree:focus .theia-TreeNode.theia-mod-selected,
+                    .theia-Tree .ReactVirtualized__List:focus .theia-TreeNode.theia-mod-selected {
+                        outline: 1px solid ${focusBorder};
+                    }
                 `);
             }
             if (contrastBorder) {
-                // Menus
-                // collector.addRule(`
-                // .p-Menu {
-                //     outline-color: ${contrastBorder};
-                // }
-                // `);
                 // Buttons
                 collector.addRule(`
-                .theia-button {
-                    border-color: ${contrastBorder};
-                }
+                    .theia-button {
+                        border: 1px solid ${contrastBorder};
+                    }
+                `);
+                // Breadcrumbs
+                collector.addRule(`
+                    .theia-tabBar-breadcrumb-row {
+                        outline: 1px solid ${contrastBorder};
+                    }
                 `);
             }
         }
+
+        // Buttons
+        const buttonBackground = theme.getColor('button.background');
+        collector.addRule(`
+            .theia-button {
+                background: ${buttonBackground || 'none'};
+            }
+        `);
+        const buttonHoverBackground = theme.getColor('button.hoverBackground');
+        if (buttonHoverBackground) {
+            collector.addRule(`
+                .theia-button:hover {
+                    background-color: ${buttonHoverBackground};
+                }
+            `);
+        }
+        const secondaryButtonBackground = theme.getColor('secondaryButton.background');
+        collector.addRule(`
+            .theia-button.secondary {
+                background: ${secondaryButtonBackground || 'none'};
+            }
+        `);
+        const secondaryButtonHoverBackground = theme.getColor('secondaryButton.hoverBackground');
+        if (secondaryButtonHoverBackground) {
+            collector.addRule(`
+                .theia-button.secondary:hover {
+                    background-color: ${secondaryButtonHoverBackground};
+                }
+            `);
+        }
+        // Tabs
+        const tabActiveBackground = theme.getColor('tab.activeBackground');
+        const tabActiveBorderTop = theme.getColor('tab.activeBorderTop') || (highContrast && contrastBorder) || 'transparent';
+        const tabActiveBorder = theme.getColor('tab.activeBorder') || (highContrast && contrastBorder) || 'transparent';
+        collector.addRule(`
+            #theia-main-content-panel .p-TabBar .p-TabBar-tab.p-mod-current {
+                color: var(--theia-tab-activeForeground);
+                ${tabActiveBackground && `background: ${tabActiveBackground};`}
+                box-shadow: 0 1px 0 ${tabActiveBorderTop}, 0 -1px 0 ${tabActiveBorder} inset;
+            }
+        `);
     }
 }
