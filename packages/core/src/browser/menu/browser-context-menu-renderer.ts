@@ -20,8 +20,6 @@ import { inject, injectable } from 'inversify';
 import { Menu } from '../widgets';
 import { ContextMenuAccess, ContextMenuRenderer, coordinateFromAnchor, RenderContextMenuOptions } from '../context-menu-renderer';
 import { BrowserMainMenuFactory } from './browser-menu-plugin';
-import { ColorTheme, CssStyleCollector, StylingParticipant } from '../styling-service';
-import { isHighContrast } from '../theming';
 
 export class BrowserContextMenuAccess extends ContextMenuAccess {
     constructor(
@@ -32,7 +30,7 @@ export class BrowserContextMenuAccess extends ContextMenuAccess {
 }
 
 @injectable()
-export class BrowserContextMenuRenderer extends ContextMenuRenderer implements StylingParticipant {
+export class BrowserContextMenuRenderer extends ContextMenuRenderer {
 
     constructor(@inject(BrowserMainMenuFactory) private menuFactory: BrowserMainMenuFactory) {
         super();
@@ -46,15 +44,6 @@ export class BrowserContextMenuRenderer extends ContextMenuRenderer implements S
         }
         contextMenu.open(x, y);
         return new BrowserContextMenuAccess(contextMenu);
-    }
-
-    registerThemeStyle(theme: ColorTheme, collector: CssStyleCollector): void {
-        const focusBorder = theme.getColor('focusBorder');
-        if (focusBorder && isHighContrast(theme.type)) {
-            collector.addRule(`.p-Menu .p-Menu-item:hover {
-                outline: 1px solid ${focusBorder};
-            }`);
-        }
     }
 
 }

@@ -20,6 +20,8 @@ import { inject, injectable, named } from 'inversify';
 import { Event, Emitter, ContributionProvider } from '../../common';
 import { WidgetDecoration } from '../widget-decoration';
 import { FrontendApplicationContribution } from '../frontend-application';
+import { ColorTheme, CssStyleCollector, StylingParticipant } from '../styling-service';
+import { isHighContrast } from '../theming';
 
 export const TabBarDecorator = Symbol('TabBarDecorator');
 
@@ -44,7 +46,7 @@ export interface TabBarDecorator {
 }
 
 @injectable()
-export class TabBarDecoratorService implements FrontendApplicationContribution {
+export class TabBarDecoratorService implements FrontendApplicationContribution, StylingParticipant {
 
     protected readonly onDidChangeDecorationsEmitter = new Emitter<void>();
 
@@ -72,5 +74,14 @@ export class TabBarDecoratorService implements FrontendApplicationContribution {
             all = all.concat(decorations);
         }
         return all;
+    }
+
+    registerThemeStyle(theme: ColorTheme, collector: CssStyleCollector): void {
+        const contrastBorder = theme.getColor('contrastBorder');
+        if (contrastBorder && isHighContrast(theme.type)) {
+            collector.addRule(`.p-TabBar .theia-badge-decorator-sidebar {
+                outline: 1px solid ${contrastBorder};
+            }`);
+        }
     }
 }

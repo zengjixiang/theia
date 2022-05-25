@@ -43,7 +43,7 @@ import { IconThemeService } from './icon-theme-service';
 import { ColorContribution } from './color-application-contribution';
 import { ColorRegistry, Color } from './color-registry';
 import { CoreConfiguration, CorePreferences } from './core-preferences';
-import { ThemeService } from './theming';
+import { isHighContrast, ThemeService } from './theming';
 import { PreferenceService, PreferenceScope, PreferenceChangeEvent } from './preferences';
 import { ClipboardService } from './clipboard-service';
 import { EncodingRegistry } from './encoding-registry';
@@ -63,6 +63,7 @@ import { isPinned, Title, togglePinned, Widget } from './widgets';
 import { SaveResourceService } from './save-resource-service';
 import { UserWorkingDirectoryProvider } from './user-working-directory-provider';
 import { createUntitledURI } from '../common';
+import { ColorTheme, CssStyleCollector, StylingParticipant } from './styling-service';
 
 export namespace CommonMenus {
 
@@ -340,7 +341,13 @@ export const supportPaste = browser.isNative || (!browser.isChrome && document.q
 export const RECENT_COMMANDS_STORAGE_KEY = 'commands';
 
 @injectable()
-export class CommonFrontendContribution implements FrontendApplicationContribution, MenuContribution, CommandContribution, KeybindingContribution, ColorContribution {
+export class CommonFrontendContribution implements
+    FrontendApplicationContribution,
+    MenuContribution,
+    CommandContribution,
+    KeybindingContribution,
+    ColorContribution,
+    StylingParticipant {
 
     protected commonDecorationsStyleSheet: CSSStyleSheet = DecorationStyle.createStyleSheet('coreCommonDecorationsStyle');
 
@@ -2237,5 +2244,48 @@ export class CommonFrontendContribution implements FrontendApplicationContributi
                 description: 'The border between subelements of a hover widget'
             }
         );
+    }
+
+    registerThemeStyle(theme: ColorTheme, collector: CssStyleCollector): void {
+        const focusBorder = theme.getColor('focusBorder');
+        const contrastBorder = theme.getColor('contrastBorder');
+        const highContrast = isHighContrast(theme.type);
+
+        if (highContrast) {
+            if (focusBorder) {
+                // Action labels (codicon buttons)
+                collector.addRule(`.action-label:hover {
+                    outline: 1px dashed ${focusBorder};
+                }
+                `);
+                // Menus
+                collector.addRule(`
+                .p-Menu .p-Menu-item.p-mod-active {
+                    outline: 1px solid ${focusBorder};
+                    outline-offset: -1px;
+                }
+                .p-MenuBar .p-MenuBar-item.p-mod-active {
+                    outline: 1px dashed ${focusBorder};
+                }
+                .p-MenuBar.p-mod-active .p-MenuBar-item.p-mod-active {
+                    outline: 1px solid ${focusBorder};
+                }
+                `);
+            }
+            if (contrastBorder) {
+                // Menus
+                // collector.addRule(`
+                // .p-Menu {
+                //     outline-color: ${contrastBorder};
+                // }
+                // `);
+                // Buttons
+                collector.addRule(`
+                .theia-button {
+                    border-color: ${contrastBorder};
+                }
+                `);
+            }
+        }
     }
 }

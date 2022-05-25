@@ -187,6 +187,7 @@ export const frontendApplicationModule = new ContainerModule((bind, _unbind, _is
     bindContributionProvider(bind, TabBarDecorator);
     bind(TabBarDecoratorService).toSelf().inSingletonScope();
     bind(FrontendApplicationContribution).toService(TabBarDecoratorService);
+    bind(StylingParticipant).toService(TabBarDecoratorService);
 
     bindContributionProvider(bind, OpenHandler);
     bind(DefaultOpenerService).toSelf().inSingletonScope();
@@ -255,7 +256,7 @@ export const frontendApplicationModule = new ContainerModule((bind, _unbind, _is
 
     bind(ResourceContextKey).toSelf().inSingletonScope();
     bind(CommonFrontendContribution).toSelf().inSingletonScope();
-    [FrontendApplicationContribution, CommandContribution, KeybindingContribution, MenuContribution, ColorContribution].forEach(serviceIdentifier =>
+    [FrontendApplicationContribution, CommandContribution, KeybindingContribution, MenuContribution, ColorContribution, StylingParticipant].forEach(serviceIdentifier =>
         bind(serviceIdentifier).toService(CommonFrontendContribution)
     );
 

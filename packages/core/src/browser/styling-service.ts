@@ -40,8 +40,10 @@ export interface CssStyleCollector {
 @injectable()
 export class StylingService implements FrontendApplicationContribution {
 
-    protected readonly themeService = ThemeService.get();
     protected cssElement = this.createStyleElement('contributedColorTheme');
+
+    @inject(ThemeService)
+    protected readonly themeService: ThemeService;
 
     @inject(ColorRegistry)
     protected readonly colorRegistry: ColorRegistry;
@@ -49,7 +51,7 @@ export class StylingService implements FrontendApplicationContribution {
     @inject(ContributionProvider) @named(StylingParticipant)
     protected readonly themingParticipants: ContributionProvider<StylingParticipant>;
 
-    initialize(): void {
+    onStart(): void {
         this.applyStyling(this.themeService.getCurrentTheme());
         this.themeService.onDidColorThemeChange(e => this.applyStyling(e.newTheme));
     }

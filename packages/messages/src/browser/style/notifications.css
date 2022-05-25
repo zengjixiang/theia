@@ -28,10 +28,12 @@
     user-select: none;
     z-index: 1111;
 }
+
 .theia-notifications-container.closed {
     display: none;
 }
-.theia-notifications-container > * {
+
+.theia-notifications-container>* {
     position: relative;
 }
 
@@ -106,11 +108,7 @@
     border-color: var(--theia-focusBorder);
 }
 
-.theia-notification-list-item:hover:not(:focus) {
-    background-color: var(--theia-list-hoverBackground);
-}
-
-.theia-notification-list > .theia-notification-list-item:not(:last-child) {
+.theia-notification-center .theia-notification-list-item:not(:last-child) {
     border-top: 1px var(--theia-notifications-border) solid;
 }
 
@@ -118,9 +116,11 @@
     margin: 6px;
     flex-grow: 3;
 }
+
 .theia-notification-list-item-content.collapsed .theia-notification-list-item-content-bottom {
     display: none;
 }
+
 .theia-notification-list-item-content.collapsed .theia-notification-message {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -155,6 +155,7 @@
     outline: 0;
     text-decoration: none;
 }
+
 .theia-notification-message a:focus {
     outline-color: var(--theia-focusBorder);
 }
@@ -189,7 +190,7 @@
     padding: 0px;
 }
 
-.theia-notification-actions > li {
+.theia-notification-actions>li {
     display: inline-block;
     height: 16px;
     width: 16px;
@@ -197,7 +198,7 @@
     margin-left: 4px;
 }
 
-.theia-notification-actions > .expand {
+.theia-notification-actions>.expand {
     transform: rotate(180deg);
 }
 
@@ -227,7 +228,7 @@
     flex-wrap: wrap;
 }
 
-.theia-notification-buttons > button {
+.theia-notification-buttons>button {
     margin: 4px;
     max-width: 160px;
     text-overflow: ellipsis;
@@ -254,10 +255,12 @@
         margin-left: 0%;
         width: 3%;
     }
+
     60% {
         margin-left: 45%;
         width: 20%;
     }
+
     100% {
         margin-left: 99%;
         width: 1%;
@@ -270,14 +273,14 @@
     width: var(--theia-scrollbar-rail-width);
 }
 
-.theia-notification-list-scroll-container .ps__rail-y:hover > .ps__thumb-y,
-.theia-notification-list-scroll-container .ps__rail-y:focus > .ps__thumb-y,
+.theia-notification-list-scroll-container .ps__rail-y:hover>.ps__thumb-y,
+.theia-notification-list-scroll-container .ps__rail-y:focus>.ps__thumb-y,
 .theia-notification-list-scroll-container .ps__rail-y.ps--clicking .ps__thumb-y {
     right: calc((var(--theia-scrollbar-rail-width) - var(--theia-scrollbar-width)) / 2);
     width: var(--theia-scrollbar-width);
 }
 
-.theia-notification-list-scroll-container .ps__rail-y > .ps__thumb-y {
+.theia-notification-list-scroll-container .ps__rail-y>.ps__thumb-y {
     width: var(--theia-scrollbar-width);
     right: calc((var(--theia-scrollbar-rail-width) - var(--theia-scrollbar-width)) / 2);
     background: var(--theia-scrollbarSlider-background);

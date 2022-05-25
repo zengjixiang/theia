@@ -19,7 +19,6 @@ import { FrontendApplicationContribution } from '../frontend-application';
 import { ContextMenuRenderer } from '../context-menu-renderer';
 import { BrowserMenuBarContribution, BrowserMainMenuFactory } from './browser-menu-plugin';
 import { BrowserContextMenuRenderer } from './browser-context-menu-renderer';
-import { StylingParticipant } from '../styling-service';
 
 export default new ContainerModule(bind => {
     bind(BrowserMainMenuFactory).toSelf().inSingletonScope();
@@ -27,5 +26,4 @@ export default new ContainerModule(bind => {
     bind(ContextMenuRenderer).to(BrowserContextMenuRenderer).inSingletonScope();
     bind(BrowserMenuBarContribution).toSelf().inSingletonScope();
     bind(FrontendApplicationContribution).toService(BrowserMenuBarContribution);
-    bind(StylingParticipant).toService(BrowserContextMenuRenderer);
 });
