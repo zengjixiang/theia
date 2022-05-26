@@ -4,6 +4,13 @@
 
 - [Previous Changelogs](https://github.com/eclipse-theia/theia/tree/master/doc/changelogs/)
 
+## v1.27.0 - n/a
+
+<a name="breaking_changes_1.27.0">[Breaking Changes:](#breaking_changes_1.27.0)</a>
+
+- Drop support for Node 12.x, recommend Node 16.x.
+  - Update CI/CD matrix to run on Node 14.x, 16.x and 18.x.
+
 ## v1.26.0 - 5/26/2022
 
 - [application-package] introduce application config prop `validatePreferencesSchema` to control whether to validate preferences on start [#11189](https://github.com/eclipse-theia/theia/pull/11189)
