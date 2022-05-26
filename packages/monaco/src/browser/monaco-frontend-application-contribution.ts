@@ -83,6 +83,7 @@ export class MonacoFrontendApplicationContribution implements FrontendApplicatio
     registerThemeStyle(theme: ColorTheme, collector: CssStyleCollector): void {
         if (isHighContrast(theme.type)) {
             const focusBorder = theme.getColor('focusBorder');
+            const contrastBorder = theme.getColor('contrastBorder');
             if (focusBorder) {
                 // Quick input
                 collector.addRule(`
@@ -96,7 +97,29 @@ export class MonacoFrontendApplicationContribution implements FrontendApplicatio
                         outline: 1px dashed ${focusBorder};
                     }
                 `);
+                // Input box always displays an outline, even when unfocused
+                collector.addRule(`
+                    .monaco-editor .find-widget .monaco-inputbox {
+                        outline: var(--theia-border-width) solid;
+                        outline-offset: calc(-1 * var(--theia-border-width));
+                        outline-color: var(--theia-focusBorder);
+                    }
+                `);
             }
+            if (contrastBorder) {
+                collector.addRule(`
+                    .quick-input-widget {
+                        outline: 1px solid ${contrastBorder};
+                        outline-offset: -1px;
+                    }
+                `);
+            }
+        } else {
+            collector.addRule(`
+                .quick-input-widget {
+                    box-shadow: rgb(0 0 0 / 36%) 0px 0px 8px 2px;
+                }
+            `);
         }
     }
 

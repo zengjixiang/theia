@@ -1631,16 +1631,16 @@ export class CommonFrontendContribution implements
             // if not yet contributed by Monaco, check runtime css variables to learn.
             {
                 id: 'quickInput.background', defaults: {
-                    dark: 'sideBar.background',
-                    light: 'sideBar.background',
-                    hc: 'sideBar.background'
+                    dark: 'editorWidget.background',
+                    light: 'editorWidget.background',
+                    hc: 'editorWidget.background'
                 }, description: 'Quick Input background color. The Quick Input widget is the container for views like the color theme picker.'
             },
             {
                 id: 'quickInput.foreground', defaults: {
-                    dark: 'sideBar.foreground',
-                    light: 'sideBar.foreground',
-                    hc: 'sideBar.foreground'
+                    dark: 'editorWidget.foreground',
+                    light: 'editorWidget.foreground',
+                    hc: 'editorWidget.foreground'
                 }, description: 'Quick Input foreground color. The Quick Input widget is the container for views like the color theme picker.'
             },
             {
@@ -2357,5 +2357,40 @@ export class CommonFrontendContribution implements
                 box-shadow: 0 1px 0 ${tabActiveBorderTop}, 0 -1px 0 ${tabActiveBorder} inset;
             }
         `);
+        // Status bar
+        if (isHighContrast(theme.type) && focusBorder) {
+            collector.addRule(`
+                #theia-statusBar .area .element.hasCommand:hover {
+                    outline: 1px dashed ${focusBorder};
+                    cursor: pointer;
+                }
+                #theia-statusBar .area .element.hasCommand:active {
+                    outline: 1px solid ${focusBorder};
+                    cursor: pointer;
+                }
+                .theia-mod-offline #theia-statusBar .area .element.hasCommand:hover {
+                    outline: none;
+                }
+                .theia-mod-offline #theia-statusBar .area .element.hasCommand:active {
+                    outline: none;
+                }
+            `);
+        } else {
+            collector.addRule(`
+                #theia-statusBar .area .element.hasCommand:hover {
+                    background-color: var(--theia-statusBarItem-hoverBackground);
+                    cursor: pointer;
+                }
+                #theia-statusBar .area .element.hasCommand:active {
+                    background-color: var(--theia-statusBarItem-activeBackground);
+                }
+                .theia-mod-offline #theia-statusBar .area .element.hasCommand:hover {
+                    background-color: var(--theia-statusBarItem-offlineHoverBackground) !important;
+                }
+                .theia-mod-offline #theia-statusBar .area .element.hasCommand:active {
+                    background-color: var(--theia-statusBarItem-offlineActiveBackground) !important;
+                }
+            `);
+        }
     }
 }
